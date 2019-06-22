@@ -1938,10 +1938,20 @@ input, select, textarea {
 		}
 
 /* Nav */
-
+	
+	
+	
 	#nav {
 		position: absolute;
-		top: 3em;
+		top: 375px;
+		left: 0;
+		width: 100%;
+		cursor: default;
+	}
+	
+	#nav1 {
+		position: absolute;
+		top: 5em;
 		left: 0;
 		width: 100%;
 		cursor: default;
@@ -1951,8 +1961,21 @@ input, select, textarea {
 			display: inline-block;
 			padding-right: 2em;
 		}
+		#nav1 > ul > li {
+			display: inline-block;
+			padding-right: 2em;
+		}
+		#nav1 > ul.login1{
+			float: right;
+			
+			}
+			li { list-style: none }
+	
 
 			#nav > ul > li:last-child {
+				padding-right: 0;
+			}
+			#nav1 > ul > li:last-child {
 				padding-right: 0;
 			}
 
@@ -1965,8 +1988,37 @@ input, select, textarea {
 				outline: 0;
 				display: block;
 			}
+			#nav1 > ul > li > a {
+				border: 0;
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: 400;
+				color: #777;
+				outline: 0;
+				display: block;
+			}
+
 
 				#nav > ul > li > a:before {
+					display: inline-block;
+					background: #878787;
+					color: #e4e4e4;
+					width: 2.25em;
+					font-size: 0.8em;
+					height: 2.25em;
+					border-radius: 2.25em;
+					line-height: 2.1em;
+					text-align: center;
+					box-shadow: 0.125em 0.175em 0 0 rgba(0, 0, 0, 0.125);
+					margin-right: 0.75em;
+					-moz-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+					-webkit-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+					-o-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+					-ms-transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+					transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+				}
+				
+				#nav1 > ul > li > a:before {
 					display: inline-block;
 					background: #878787;
 					color: #e4e4e4;
@@ -1994,11 +2046,20 @@ input, select, textarea {
 					font-size: 0.85em;
 					letter-spacing: 3px;
 				}
+				#nav1 > ul > li > a > span {
+					-moz-transition: color 0.25s ease-in-out;
+					-webkit-transition: color 0.25s ease-in-out;
+					-o-transition: color 0.25s ease-in-out;
+					-ms-transition: color 0.25s ease-in-out;
+					transition: color 0.25s ease-in-out;
+					font-size: 0.85em;
+					letter-spacing: 3px;
+				}
 
 			#nav > ul > li > ul {
 				display: none;
 			}
-
+			
 			#nav > ul > li.active > a:before,
 			#nav > ul > li:hover > a:before {
 				background: #ED786A;
@@ -2009,6 +2070,23 @@ input, select, textarea {
 			#nav > ul > li:hover > a > span {
 				color: #ED786A;
 			}
+			
+			#nav1 > ul > li > ul {
+				display: none;
+			}
+			
+			#nav1 > ul > li.active > a:before,
+			#nav1 > ul > li:hover > a:before {
+				background: #ED786A;
+				color: #fff;
+			}
+
+			#nav1 > ul > li.active > a > span,
+			#nav1 > ul > li:hover > a > span {
+				color: #ED786A;
+			}
+			
+
 
 	.dropotron {
 		text-align: left;
@@ -2289,7 +2367,10 @@ input, select, textarea {
 			#nav > ul > li {
 				padding-right: 1.25em;
 			}
-
+			#nav1 > ul > li {
+				padding-right: 1.25em;
+			}
+			
 		/* Features */
 
 			#features {
@@ -2356,6 +2437,9 @@ input, select, textarea {
 			#nav {
 				display: none;
 			}
+			#nav1 {
+				display: none;
+			}
 
 		/* Nav */
 
@@ -2401,7 +2485,7 @@ input, select, textarea {
 
 					#titleBar .toggle:before {
 						-moz-osx-font-smoothing: grayscale;
-						-webkit-font-smoothing: antialiased;
+						-webkit-font-smoothing: red;
 						display: inline-block;
 						font-style: normal;
 						font-variant: normal;
@@ -2700,6 +2784,41 @@ input, select, textarea {
 					padding-left: 0;
 					margin-left: 0;
 					border-left: 0;
+
+
 				}
 
 	}
+	
+
+<!--
+
+
+body.is-menu-visible #wrapper {
+		-moz-filter: blur(0.5em);
+		-webkit-filter: blur(0.5em);
+		-ms-filter: blur(0.5em);
+		filter: blur(0.5em);
+	}
+
+	body.is-menu-visible #menu {
+		-moz-pointer-events: auto;
+		-webkit-pointer-events: auto;
+		-ms-pointer-events: auto;
+		pointer-events: auto;
+		opacity: 1;
+		visibility: visible;
+	}
+
+		body.is-menu-visible #menu .inner {
+			-moz-transform: none;
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+			opacity: 1;
+			visibility: visible;
+		}
+	
+	
+	
+	

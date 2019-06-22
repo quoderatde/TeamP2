@@ -25,6 +25,18 @@ public class MemberDTO {
 		this.youtube = youtube;
 	}
 
+	public MemberDTO(String email, String pw) {
+		this.email = email;
+		this.pw = pw;
+	}
+
+	public MemberDTO(String email, String pw, String tel, String address) {
+		this.email = email;
+		this.pw = pw;
+		this.tel = tel;
+		this.address = address;
+	}
+
 	public String getEmail() {
 		return email;
 	}
