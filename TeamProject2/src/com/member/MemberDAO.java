@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 public class MemberDAO {
@@ -137,5 +138,64 @@ public class MemberDAO {
 			close();
 		}
 		return 0;
+	}
+	
+	
+	public int Del_List(String[] list)
+	{
+		conn();
+		String sql = "DELETE FROM REQUEST_LIST_MEMBER WHERE EMAIL=?";
+		int cnt=0;
+		try
+		{
+			for(int i=0; i<list.length; i++)
+			{
+				 pst = conn.prepareStatement(sql);
+				 pst.setString(1, list[i]);
+				 cnt = pst.executeUpdate();
+				
+			}
+			 return cnt;
+		}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		finally 
+		{
+			close();
+			
+		}
+		
+		return 0;
+	}
+	
+	public ArrayList<MemberDTO> Email_Select()
+	{
+		conn();
+		String sql = "SELECT YOUTUBE,EMAIL,NAME,TEL,ADDRESS FROM MEMBER WHERE EMAIL IN (SELECT EMAIL FROM REQUEST_LIST_MEMBER WHERE CHECK_CODE=1)";
+		ArrayList<MemberDTO>Info = new ArrayList<MemberDTO>(); 
+		try {
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				MemberDTO list=new MemberDTO();
+				list.setYoutube(rs.getString(1));
+				list.setEmail(rs.getString(2));
+				list.setName(rs.getString(3));
+				list.setTel(rs.getString(4));
+				list.setAddress(rs.getString(5));
+				Info.add(list);
+				
+			}
+			return Info;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		
+		return Info;
 	}
 }

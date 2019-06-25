@@ -17,12 +17,12 @@ public class MailService
 	
 		  String host     = "smtp.naver.com";
 		  final String user   = "rhkddy77";
-		  final String password  = "";
+		  final String password  = "Skdlwma12!";
 		
 		  
 		  for(int i=0; i<list.length; i++)
 		  {
-			  String to     = list[i];
+			  String to  = list[i];
 			  
 			  // Get the session object
 			  Properties props = new Properties();
@@ -45,10 +45,10 @@ public class MailService
 				  message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
 			   // Subject
-				  message.setSubject("[Subject] Java Mail Test");
+				  message.setSubject("[치현이와아이들]고객님이 요청하신 분석이 완료되었습니다.");
 			   
 			   // Text
-				  message.setText("Simple mail test..");
+				  message.setText("[치현이와아이들]고객님이 요청하신 분석이 완료되었습니다.\n아래 링크로 접속하여 확인해주세요\n www.naver.com ");
 
 			   // send the message
 				  Transport.send(message);

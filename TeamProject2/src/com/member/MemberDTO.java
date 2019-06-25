@@ -36,6 +36,9 @@ public class MemberDTO {
 		this.tel = tel;
 		this.address = address;
 	}
+	public MemberDTO() {
+		
+	}
 
 	public String getEmail() {
 		return email;
