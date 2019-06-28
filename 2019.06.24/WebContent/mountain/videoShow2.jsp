@@ -29,15 +29,16 @@
 <link href="./main.550dcf66.css" rel="stylesheet">
 
 <style type="text/css">
-li{
- list-style: none;
+li {
+	list-style: none;
 }
-span.title{
-font-size:15px;
 
+span.title {
+	font-size: 15px;
 }
-body{
-background-color: #F6F6F6;
+
+body {
+	background-color: #F6F6F6;
 }
 </style>
 
@@ -85,24 +86,21 @@ background-color: #F6F6F6;
 
 	<div class="page-container">
 		<h1>YouTube 동영상 분석하기</h1>
-	
-		<form class="search-form" action="videoShow2.jsp">
-		<table border="1">
-		<tr>
-		<td>
-			<input id="video-url" class="form-input" autocomplete="off"
-				placeholder="https://www.youtube.com/watch?v=6XSa_sVERfo"><a
-				href="https://www.youtube.com/watch?v=6XSa_sVERfo"> </a>
-			
-			
-			</td>
-			<td><button id="search-btn" type="submit" class="form-btn"
-				sensors-name="kol_web_ytbvideo_start">분석하기</button></td>
+
+		<form class="search-form" action="videoShow3.jsp">
+			<table border="1">
+				<tr>
+					<td><input id="video-url" class="form-input"
+						autocomplete="off"
+						placeholder="https://www.youtube.com/watch?v=qrTl-1yAv4w"><a
+						href="https://www.youtube.com/watch?v=qrTl-1yAv4w"> </a></td>
+					<td><button id="search-btn" type="submit" class="form-btn"
+							sensors-name="kol_web_ytbvideo_start">분석하기</button></td>
 				</tr>
-				</table>
-				<br>
-			
-			
+			</table>
+			<br>
+
+
 		</form>
 
 		<div data-dom-result="" class="result-block">
@@ -110,21 +108,21 @@ background-color: #F6F6F6;
 				<div class="video-wrapper">
 					<iframe id="player" class="player" type="text/html" width="482"
 						height="272" allowfullscreen="1"
-						src="https://www.youtube.com/embed/6XSa_sVERfo?enablejsapi=1&amp;origin=https://www.noxinfluencer.com"
+						src="https://www.youtube.com/embed/qrTl-1yAv4w?enablejsapi=1&amp;origin=https://www.noxinfluencer.com"
 						frameborder="0" enablejsapi="true"></iframe>
 				</div>
-				<div title="렛지그랩으로 어디까지 갈 수 있을까? [배틀그라운드]" class="title ellipsis">렛지그랩으로
-					어디까지 갈 수 있을까? [배틀그라운드]</div>
-				<a href="/youtube/channel/UCHxKSivB6JLZ1SEMdxd1fAg"
+				<div title="배그 2년인생 처음으로 신규 패치 리뷰를 했더니.. [배틀그라운드]"
+					class="title ellipsis">배그 2년인생 처음으로 신규 패치 리뷰를 했더니.. [배틀그라운드]</div>
+				<a href="/youtube/channel/UCAaLhok91QDrweyuDRsmjqQ"
 					class="block mt-8"><img
-					src="https://res06.bignox.com/noxinfluencer/youtube/avatar/0fa2d06f02689c60c99f179d43ae4247.png"
+					src="https://res06.bignox.com/noxinfluencer/youtube/avatar/e90cf15a07acad1938a50c5b36b6452e.png"
 					class="img">
 				<div class="info-block">
-						<span class="title">뜨뜨뜨뜨</span>
+						<span class="title">킴성태TV</span>
 						<div>
-							<span>118.19만 </span><span> 구독자 수</span><span class="ml-8">740
-							</span><span> 동영상 수</span><span class="ml-8">3.22억 </span><span>
-								누적 조회수</span><span>· 2019-06-26</span>
+							<span>86.89만 </span><span> 구독자 수</span><span class="ml-8">
+							</span><span> 동영상 수</span><span class="ml-8">3.05억 </span><span>
+								누적 조회수</span><span>· 2019-06-27</span>
 						</div>
 					</div></a>
 			</div>
@@ -133,14 +131,14 @@ background-color: #F6F6F6;
 					<span class="title"> 동영상 분석 보고서 </span>
 					<ul class="detail-list">
 						<li class="detail-item"><div class="title">동영상 조회수</div>
-							<div class="content">24.75만</div></li>
+							<div class="content">14.46만</div></li>
 						<li class="detail-item"><div class="title">
 								<span>구독자 조회비율<i data-toggle="tooltip" title=""
 									class="kolicon kol-icon-question-circle ml-8"
 									data-original-title="동영상이 구독자에게&nbsp;도달하는 퍼센트,&nbsp;퍼센트가 높을수록 구독자의&nbsp;활동량이&nbsp;높습니다."></i></span>
 							</div>
 							<div class="content">
-								20.9% <span class="detail">(<span class="c-success">좋아요</span>)
+								16.6% <span class="detail">(<span class="c-success">좋아요</span>)
 								</span>
 							</div></li>
 					</ul>
@@ -154,19 +152,19 @@ background-color: #F6F6F6;
 									data-original-title="구독자들이 영상에 대한 좋아요 및 싫어요를 볼 수 있습니다."></i></span>
 							</div>
 							<div class="content">
-								97.2% <span class="detail">(2851 <i
-									class="kol-icon kol-icon-like"></i> / 83 <i
+								96.4% <span class="detail">(1401 <i
+									class="kol-icon kol-icon-like"></i> / 52 <i
 									class="kol-icon kol-icon-dislike"></i>)
 								</span>
 							</div></li>
 						<li class="detail-item"><div class="title">댓글수</div>
-							<div class="content">207</div></li>
+							<div class="content">162</div></li>
 						<li class="detail-item"><div class="title">
 								<span>구독자 참여율<i data-toggle="tooltip" title=""
 									class="kolicon kol-icon-question-circle ml-8"
 									data-original-title="댓글 및 좋아요&nbsp;등 데이터를&nbsp;기준으로&nbsp;분석한 결과입니다.&nbsp;"></i></span>
 							</div>
-							<div class="content">2%</div></li>
+							<div class="content">2.1%</div></li>
 					</ul>
 				</div>
 				<div class="detail-block">
@@ -174,17 +172,47 @@ background-color: #F6F6F6;
 						data-original-title="동영상 태그는 동영상의 중요 정보를 반영하는 것입니다. 태그를 클릭하여 자세한 정보를 확인해보십시오.">동영상
 							태그</span></span>
 					<ul class="tag-list">
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">뜨뜨뜨뜨</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그</span>
 						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">오버워치</span>
 						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">옵치</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">러너웨이</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">트위치</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">스트리머</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">뜨뜨</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">아프리카</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">아프리카TV</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">서든</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">서든어택</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">롤</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">리그오브레전드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">킴성태TV</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">하이즈</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">킴해적단</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">박사장</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">깨박이</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그레전드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드레전드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">철구</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">봉준</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그하이라이트</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">솔쿼드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">보겸</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">킴성태배그</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">battleground</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">랜덤스쿼드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그
+							고수</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">에땁</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">awm</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">m24</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">kar98</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">여포</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배킴스</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">APL</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그
+							신기록</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드
+							최다킬</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">랜쿼드</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">랜듀오</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배린이</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그
+							하이라이트</span>
 					</ul>
 				</div>
 			</div>
@@ -223,33 +251,31 @@ background-color: #F6F6F6;
 
 
 		<table>
-		<tr>
-		<td>
-		<input id="countryCode" type="hidden" value="KR">
-		<div class="popup" id="popup-tag">
-			<div class="content-container">
-				<div class="content">
-					<span data-close-popup class="kol-icon kol-icon-fork"></span> <span
-						class="kol-tag ellipsis" id="popup-data-tag"></span>
-					<div>
-						<div class="content-block">
-							<div class="title">YouTube 에서 이 태그의 조회수 추이 (최근 30일)</div>
-							<div class="content-detail">
-								<div class="chart-wrapper" id="popup-dom-chart"></div>
+			<tr>
+				<td><input id="countryCode" type="hidden" value="KR">
+					<div class="popup" id="popup-tag">
+						<div class="content-container">
+							<div class="content">
+								<span data-close-popup class="kol-icon kol-icon-fork"></span> <span
+									class="kol-tag ellipsis" id="popup-data-tag"></span>
+								<div>
+									<div class="content-block">
+										<div class="title">YouTube 에서 이 태그의 조회수 추이 (최근 30일)</div>
+										<div class="content-detail">
+											<div class="chart-wrapper" id="popup-dom-chart"></div>
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
+					</div></td>
+				<td>
 
-					</div>
-				</div>
-			</div>
-		</div>
-		</td>
-		<td>
-		
-		<div>예상 조회수 </div>
-		
-		</td>
-		</tr>
+					<div>예상 조회수</div>
+
+				</td>
+			</tr>
 		</table>
 
 

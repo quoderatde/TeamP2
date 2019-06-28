@@ -29,15 +29,16 @@
 <link href="./main.550dcf66.css" rel="stylesheet">
 
 <style type="text/css">
-li{
- list-style: none;
+li {
+	list-style: none;
 }
-span.title{
-font-size:15px;
 
+span.title {
+	font-size: 15px;
 }
-body{
-background-color: #F6F6F6;
+
+body {
+	background-color: #F6F6F6;
 }
 </style>
 
@@ -85,24 +86,21 @@ background-color: #F6F6F6;
 
 	<div class="page-container">
 		<h1>YouTube 동영상 분석하기</h1>
-	
-		<form class="search-form" action="videoShow2.jsp">
-		<table border="1">
-		<tr>
-		<td>
-			<input id="video-url" class="form-input" autocomplete="off"
-				placeholder="https://www.youtube.com/watch?v=6XSa_sVERfo"><a
-				href="https://www.youtube.com/watch?v=6XSa_sVERfo"> </a>
-			
-			
-			</td>
-			<td><button id="search-btn" type="submit" class="form-btn"
-				sensors-name="kol_web_ytbvideo_start">분석하기</button></td>
+
+		<form class="search-form" action="videoShow3.jsp">
+			<table border="1">
+				<tr>
+					<td><input id="video-url" class="form-input"
+						autocomplete="off"
+						placeholder="https://www.youtube.com/watch?v=qrTl-1yAv4w"><a
+						href="https://www.youtube.com/watch?v=qrTl-1yAv4w"> </a></td>
+					<td><button id="search-btn" type="submit" class="form-btn"
+							sensors-name="kol_web_ytbvideo_start">분석하기</button></td>
 				</tr>
-				</table>
-				<br>
-			
-			
+			</table>
+			<br>
+
+
 		</form>
 
 		<div data-dom-result="" class="result-block">
@@ -110,21 +108,22 @@ background-color: #F6F6F6;
 				<div class="video-wrapper">
 					<iframe id="player" class="player" type="text/html" width="482"
 						height="272" allowfullscreen="1"
-						src="https://www.youtube.com/embed/6XSa_sVERfo?enablejsapi=1&amp;origin=https://www.noxinfluencer.com"
+						src="https://www.youtube.com/embed/mXaA--r7iPQ?enablejsapi=1&amp;origin=https://www.noxinfluencer.com"
 						frameborder="0" enablejsapi="true"></iframe>
 				</div>
-				<div title="렛지그랩으로 어디까지 갈 수 있을까? [배틀그라운드]" class="title ellipsis">렛지그랩으로
-					어디까지 갈 수 있을까? [배틀그라운드]</div>
-				<a href="/youtube/channel/UCHxKSivB6JLZ1SEMdxd1fAg"
+				<div title="배그판 '테두리핵' 탬탬버린&amp;코렛트를 캐리해야합니다 ㅋㅋㅋ | 배틀그라운드 |  윤루트"
+					class="title ellipsis">배그판 '테두리핵' 탬탬버린&amp;코렛트를 캐리해야합니다 ㅋㅋㅋ |
+					배틀그라운드 | 윤루트</div>
+				<a href="/youtube/channel/UCmJ4DkPFPzjR2TkJ7lXSQWw"
 					class="block mt-8"><img
-					src="https://res06.bignox.com/noxinfluencer/youtube/avatar/0fa2d06f02689c60c99f179d43ae4247.png"
+					src="https://res06.bignox.com/noxinfluencer/youtube/avatar/2fe74c03c7fa443b1c98db46b49a1aef.png"
 					class="img">
 				<div class="info-block">
-						<span class="title">뜨뜨뜨뜨</span>
+						<span class="title">YoonRoot</span>
 						<div>
-							<span>118.19만 </span><span> 구독자 수</span><span class="ml-8">740
-							</span><span> 동영상 수</span><span class="ml-8">3.22억 </span><span>
-								누적 조회수</span><span>· 2019-06-26</span>
+							<span>22.9만 </span><span> 구독자 수</span><span class="ml-8">1024
+							</span><span> 동영상 수</span><span class="ml-8">5488.58만 </span><span>
+								누적 조회수</span><span>· 2019-06-23</span>
 						</div>
 					</div></a>
 			</div>
@@ -133,16 +132,18 @@ background-color: #F6F6F6;
 					<span class="title"> 동영상 분석 보고서 </span>
 					<ul class="detail-list">
 						<li class="detail-item"><div class="title">동영상 조회수</div>
-							<div class="content">24.75만</div></li>
+							<div class="content">6.95만</div></li>
 						<li class="detail-item"><div class="title">
 								<span>구독자 조회비율<i data-toggle="tooltip" title=""
 									class="kolicon kol-icon-question-circle ml-8"
 									data-original-title="동영상이 구독자에게&nbsp;도달하는 퍼센트,&nbsp;퍼센트가 높을수록 구독자의&nbsp;활동량이&nbsp;높습니다."></i></span>
 							</div>
 							<div class="content">
-								20.9% <span class="detail">(<span class="c-success">좋아요</span>)
+								30.3% <span class="detail">(<span class="c-success">아주
+										좋아요</span>)
 								</span>
 							</div></li>
+						
 					</ul>
 				</div>
 				<div class="detail-block">
@@ -154,19 +155,19 @@ background-color: #F6F6F6;
 									data-original-title="구독자들이 영상에 대한 좋아요 및 싫어요를 볼 수 있습니다."></i></span>
 							</div>
 							<div class="content">
-								97.2% <span class="detail">(2851 <i
-									class="kol-icon kol-icon-like"></i> / 83 <i
+								98.7% <span class="detail">(1029 <i
+									class="kol-icon kol-icon-like"></i> / 14 <i
 									class="kol-icon kol-icon-dislike"></i>)
 								</span>
 							</div></li>
 						<li class="detail-item"><div class="title">댓글수</div>
-							<div class="content">207</div></li>
+							<div class="content">119</div></li>
 						<li class="detail-item"><div class="title">
 								<span>구독자 참여율<i data-toggle="tooltip" title=""
 									class="kolicon kol-icon-question-circle ml-8"
 									data-original-title="댓글 및 좋아요&nbsp;등 데이터를&nbsp;기준으로&nbsp;분석한 결과입니다.&nbsp;"></i></span>
 							</div>
-							<div class="content">2%</div></li>
+							<div class="content">3.2%</div></li>
 					</ul>
 				</div>
 				<div class="detail-block">
@@ -174,22 +175,50 @@ background-color: #F6F6F6;
 						data-original-title="동영상 태그는 동영상의 중요 정보를 반영하는 것입니다. 태그를 클릭하여 자세한 정보를 확인해보십시오.">동영상
 							태그</span></span>
 					<ul class="tag-list">
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">뜨뜨뜨뜨</span>
 						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드</span>
 						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">오버워치</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">옵치</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">러너웨이</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">트위치</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">스트리머</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">뜨뜨</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">아프리카</span>
-						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">아프리카TV</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">pubg</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">윤루트</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">yoonroot</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">실력파게이머</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">게이머</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">실력</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">에임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">battleground</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">게임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">게임실황</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그실황</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">비디오게임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">에임향상</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그에임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드에임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그프로게이머</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드프로게이머</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">스팀</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">블루홀</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">fps</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">슈팅게임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">3인칭슈팅게임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">1인칭슈팅게임</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">프로게임단</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">샌드박스</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">샌드박스네크워크</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드고인물</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">고인물</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">반동제어</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그반동제어</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배틀그라운드반동제어</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">단발광클</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그전설</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">탬탬버린</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">코렛트</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">탬코코인</span>
+						<span sensors-name="web_ytbvideo_tags" data-tag="" class="kol-tag">배그
+							캐리</span>
 					</ul>
 				</div>
 			</div>
 		</div>
-
 		<div id="Auth" class="hide" data-auth-state=""></div>
 		<input id="uid" type="hidden" value=""> <input id="id"
 			type="hidden" value=""> <input id="userType" type="hidden"
@@ -223,33 +252,31 @@ background-color: #F6F6F6;
 
 
 		<table>
-		<tr>
-		<td>
-		<input id="countryCode" type="hidden" value="KR">
-		<div class="popup" id="popup-tag">
-			<div class="content-container">
-				<div class="content">
-					<span data-close-popup class="kol-icon kol-icon-fork"></span> <span
-						class="kol-tag ellipsis" id="popup-data-tag"></span>
-					<div>
-						<div class="content-block">
-							<div class="title">YouTube 에서 이 태그의 조회수 추이 (최근 30일)</div>
-							<div class="content-detail">
-								<div class="chart-wrapper" id="popup-dom-chart"></div>
+			<tr>
+				<td><input id="countryCode" type="hidden" value="KR">
+					<div class="popup" id="popup-tag">
+						<div class="content-container">
+							<div class="content">
+								<span data-close-popup class="kol-icon kol-icon-fork"></span> <span
+									class="kol-tag ellipsis" id="popup-data-tag"></span>
+								<div>
+									<div class="content-block">
+										<div class="title">YouTube 에서 이 태그의 조회수 추이 (최근 30일)</div>
+										<div class="content-detail">
+											<div class="chart-wrapper" id="popup-dom-chart"></div>
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
+					</div></td>
+				<td>
 
-					</div>
-				</div>
-			</div>
-		</div>
-		</td>
-		<td>
-		
-		<div>예상 조회수 </div>
-		
-		</td>
-		</tr>
+					<div>예상 조회수</div>
+
+				</td>
+			</tr>
 		</table>
 
 
