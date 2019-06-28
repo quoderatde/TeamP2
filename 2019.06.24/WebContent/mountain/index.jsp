@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@page import="com.member.MemberDTO"%>    
+<%@page import="com.application.ApplicationDTO"%>   
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,8 @@
   <link href="./assets/favicon.ico" rel="icon">
 
   <link href="" rel="stylesheet">
-
+<link href="css/common.2fef164c.css" rel="stylesheet">
+<link href="css/home.2f72f8e5.css" rel="stylesheet">
 
   <title>메인&소개</title>
 
@@ -28,13 +30,21 @@
 <style type="text/css">
 input#search-input{
 width: 500px;
-height: 30px;
+height: 35px;
 
 }
 h6{
 color: white;
 }
-
+button#search-btn{
+height: 35px;
+}
+h2,h3{
+font-style: 
+}
+li{
+ list-style: none;
+}
 
 </style>
 
@@ -54,7 +64,7 @@ color: white;
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="./index.html" title="">
+        <a class="navbar-brand" href="./index.jsp" title="">
           <img src="./assets/images/mashup-icon.svg" class="navbar-logo-img" alt="">
           치현이와 아이들
         </a>
@@ -64,14 +74,15 @@ color: white;
         <ul class="nav navbar-nav navbar-right">
           <li><a href="./index.jsp" title="">Home</a></li>
           <li><a href="./application.jsp" title="">분석신청</a></li>
+          <li><a href="./board.jsp" title="">게시판</a></li>
+          
           <li>
             <p>
             <% System.out.println(info); %>
             <%if(info==null){ %>
               <a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
             <%}else{ %>
-            			
-			 <a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님 환영합니다!</a> 
+        	<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님 환영합니다!</a> 
 			<a href="logout.do" class="btn btn-default navbar-btn" title="">로그아웃</a>
 			
 			<%} %>
@@ -92,31 +103,56 @@ color: white;
           <h1>치현이와 아이들</h1>
           <p>WELCOME TO WORLD!!</p>
           <br>
-          <img src="aa.png"><a href="https://www.youtube.com/results?search_query=">
-          <input id="search-input" class="kol-input" placeholder="YouTube 채널 키워드 또는 링크를 검색하기"> </a>
-          <button id="search-btn" class="kol-btn kol-btn-primary"><i class="kolicon kol-icon-search">검색</i></button>
+          <img src="aa.png">
+          
+          <input type="text" id="search-input" class="kol-input" placeholder="동영상 주소를 입력해주세요. "> 
+          <button id="search-btn" class="kol-btn kol-btn-primary">바로가기</button>
+       
         
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <div class="text-center">
-            <h2>프로그램 소개</h2>
-            <p>머신러닝을 통한 분석서비스 입니다. 
-            <br>
-           머신러닝을 통한 유튜브 조회수 예측 프로그램 </p>
-          </div>
-       </div>
-      </div>
-    </div>
-  </div>
+  
+  
+  <section class="section-block card-block">
+		<div class="section-container">
+			<h2>치현이와 아이들 플랫폼 자세히 보기</h2>
+			<h3>YouTube 조회</h3>
+			<ul class="card-list">
+				
+				<li class="card-item"><a class="card-link"
+					href="/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly" style="text-decoration:none" >
+					<div class="icon-wrapper">
+							<i class="kolicon kol-icon-rank"><img src="img/qq.PNG"></i>
+						</div>
+						<div class="title">인기 유튜버 순위</div>
+						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div></a></li>
+				<li class="card-item"><a class="card-link"
+					href="/youtube-video-rank" style="text-decoration:none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
+						</div>
+						<div class="title">YouTube 동영상 랭킹</div>
+						<div class="sub-title">유튜브 YouTube 동영상을 당신의 손 안에 쏟아 붓고 있습니다</div></a></li>
+				<li class="card-item"><a class="card-link"
+					href="/youtube/channel-compare" style="text-decoration:none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-compare"><img src="img/zz.PNG"></i>
+						</div>
+						<div class="title">실시간 YouTube 구독자 수</div>
+						<div class="sub-title">최고의 실시간 구독자 통계 도구</div></a></li>
+				<li class="card-item"><a class="card-link"
+					href="video.jsp" style="text-decoration:none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-video"><img src="img/dd.PNG"></i>
+						</div>
+						<div class="title">YouTube 동영상 분석</div>
+						<div class="sub-title">YouTube 동영상 분석 및 <br>
+						머신러닝을 통한 조회수 예측 </div></a></li>
+			</ul>
+		</div>
+	</section>
 
-  <div class="section-container">
+ <!--  <div class="section-container">
     <div class="container">
       <div class="row">      
           <div class="col-xs-12">
@@ -130,19 +166,19 @@ color: white;
                         <img class="img-responsive" src="./assets/images/img-06.jpg" alt="First slide">
                         <div class="carousel-caption card-shadow reveal">
                           
-                          <h3>분석그래프 </h3>
+                          <h3>머신러닝이란? </h3>
                           <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                             <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                            <span class="sr-only">예시</span>
+                            <span class="sr-only">Previous</span>
                           </a>
                           <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                             <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            <span class="sr-only">다음</span>
+                            <span class="sr-only">Next</span>
                           </a>
                           <p>
-                            Sed id tellus in risus pre
-                            tium imperdiet eu lobortis dolor. Sed pellentesque, urna ac viverra lacinia, erat mauris venenatis purus, mollis egestas urna purus ac ex.
-                            Aenean nunc sem, lobortis at elit non, lobortis laoreet nibh. Maecenas at mi ipsum.
+				                             인공 지능의 한 분야로, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발하는 분야를 말한다. 
+				                            가령, 기계 학습을 통해서 수신한 이메일이 스팸인지 아닌지를 구분할 수 있도록 훈련할 수 있다. 
+				                            기계 학습의 핵심은 표현과 일반화에 있다.
                           </p>
                           
                           <p>
@@ -175,7 +211,7 @@ color: white;
                           <p>
                             Quisque tempor, ligula pharetra luctus elementum, arcu nisl suscipit ante, pharetra commodo dui est et enim. Sed eu vestibulum elit. Donec ut libero non.
                           </p>
-                          <a href="./application.jsp" class="btn btn-primary" title="">
+                          <a href="#" class="btn btn-primary" title="">
                             Discover
                           </a>
                         </div>
@@ -191,59 +227,8 @@ color: white;
       
     </div>
   </div>
-
+ -->
  
-  <div class="section-container contact-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12">
-          <div class="section-container-spacer">
-            <h2 class="text-center">Get in touch</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="card-container">
-            <div class="card card-shadow col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 reveal">
-              <form action="" class="reveal-content">
-                <div class="row">
-                  <div class="col-md-7">
-                    <div class="form-group">
-                      <input type="email" class="form-control" id="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" id="subject" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                      <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send message</button>
-                  </div>
-                  <div class="col-md-5">
-                    <ul class="list-unstyled address-container">
-                      <li>
-                        <span class="fa-icon">
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                        + 33 9 07 45 12 65
-                      </li>
-                      <li>
-                        <span class="fa-icon">
-                          <i class="fa fa fa-map-o" aria-hidden="true"></i>
-                        </span>
-                        42 rue Moulbert 75016 Paris
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="card-image col-xs-12" style="background-image: url('/assets/images/img-01.jpg')">
-            </div>
-          </div>
-        </div>  
-      </div>
-    </div>
-  </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function (event) {
@@ -253,11 +238,10 @@ color: white;
 
 <footer class="footer-container white-text-container">
   <div class="container">
-    <div class="row">
+    <div class="row"> 
 
-     
       <div class="col-xs-12">
-        <h3>Mountain</h3>
+        <h3>치현이와 아이들</h3>
 
         <div class="row">
           <div class="col-xs-12 col-sm-7">
@@ -306,5 +290,19 @@ color: white;
 </script>
 
 --> <script type="text/javascript" src="./main.0cf8b554.js"></script></body>
+<script>var egg = document.getElementById('close-egg');
+    egg.onclick = function (e) {
+        $('#home-egg').remove();
+        if (e.preventDefault) {
+            e.preventDefault();
+        } else {
+            window.event.returnValue == false;
+        };
+    }</script>
+	<script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
+	<script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
+	<script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
+	<script type="text/javascript" src="/js/chunk.home.86f7275f.js"></script>
+	<script type="text/javascript">sa.track('page_visit');</script>
 
 </html>

@@ -32,7 +32,7 @@ public class JoinCon extends HttpServlet implements ICommand {
 		  MemberDAO dao = new MemberDAO(); 
 		  dao.Join(dto);
 		  
-		  String url="join.jsp";
+		  String url="index.jsp";
 		  
 		  return url;
 		 

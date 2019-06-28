@@ -12,7 +12,7 @@ import com.front.ICommand;
 public class ApplicationCon extends HttpServlet implements ICommand {
 
 
-	@Override
+
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -23,7 +23,7 @@ public class ApplicationCon extends HttpServlet implements ICommand {
 	dao.application(dto);
 	
 
-	  String url= "project.html";
+	  String url= "application.jsp";
 		
 	  return url;
 	}

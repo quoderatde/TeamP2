@@ -60,7 +60,7 @@ font-size: 18px;
         <ul class="nav navbar-nav navbar-right">
           <li><a href="./index.jsp" title="">Home</a></li>
           <li><a href="./application.jsp" title="">분석신청</a></li>
-          <li><a href="./board.jsp" title="">게시판</a></li>
+           <li><a href="./board.jsp" title="">게시판</a></li>
           <li>
             <p>
              <a href="./login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
@@ -74,79 +74,7 @@ font-size: 18px;
   </nav>
 </header>
 
-<div class="section-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <h1 class="text-center">분석신청서 </h1>
-          <p>분석신청 의뢰 페이지 입니다. 페이지 작성해주세요 </p>
 
-          </div>
-       </div>
-      </div>
-    </div>
-
-  <div class="section-container">
-    <div class="container">
-      <div class="row section-container-spacer">
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
-          <div class="section-container-spacer">
-           
-            
-            <form action="application.do" method="post">
-            <!--name="request_form" id="request_form"  onsubmit="return check_request_form(this)" -->
-            <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" class="reqForm">
-	 
-	  <tbody>
-         
-          			 <div class="form-group">
-	                                        남 자<input type="radio"  value="남" name="sex">
-	       			    여 자<input type="radio"  value="여" name="sex">
-                    </div>
-                   <div class="form-group">
-                      <input type="text" name ="name" class="form-control" id="subject" placeholder="의뢰자명">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="email" class="form-control" id="subject" placeholder="EMAIL">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="rolemodel" class="form-control" id="subject" placeholder="롤모델 유튜버">
-                    </div>
-                    
-                     <div class="form-group">
-                     <input type="text" name="tel" class="form-control" id="subject" placeholder="휴대폰번호">
-                
-                    </div>
-                    <div class="form-group">
-                      <input type="text" name="videoAddress" class="form-control" id="subject" placeholder="동영상 주소">
-                    </div>
-                    <div class="form-group">
-                      <textarea class="form-control" name="content" rows="3" placeholder="기타사항"></textarea>
-                    </div>
-                    
-                     
-                
-				<br>
-				<br>
-
-    
-      <tr>
-        <td height="50"  bgcolor="#FFFFFF" align="center">
-		<input type="hidden" name="agree_tbroad" value="">
-		
-	<button class="btn btn-theme btn-block" type="submit"> 접수</button>
-
-		</td>
-      </tr>
-      
-	  
-    </tbody></table>
-    </form>
-          </div>  
-        </div>  
-      </div>
-    </div>
-  </div>
 
   <div class="section-container">
     <div class="container text-center">
