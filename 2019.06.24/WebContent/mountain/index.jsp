@@ -123,7 +123,7 @@ li{
 			<ul class="card-list">
 				
 				<li class="card-item"><a class="card-link"
-					href="/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly" style="text-decoration:none" >
+					href="influ.jsp" style="text-decoration:none" >
 					<div class="icon-wrapper">
 							<i class="kolicon kol-icon-rank"><img src="img/qq.PNG"></i>
 						</div>
