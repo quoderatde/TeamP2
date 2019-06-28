@@ -42,8 +42,9 @@ background-color: #F6F6F6;
 }
 
 iframe {
+    
     width: 1500px;
-    height: 800px;
+    height: 900px;
     border: 10px;
     -ms-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -56,7 +57,10 @@ iframe {
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
+    
 }
+
+
 
 
 </style>
@@ -104,18 +108,9 @@ iframe {
 	</header>
 	
 	
-<div class="page-container" align="center">
-
-
-
-
-
-  <iframe src="https://kr.noxinfluencer.com/youtube/realtime-subs-count/"  scrolling="no"></iframe>
-	 
-	
-			
-	</div>
-			
+<div class="page-container" align="center" style="overflow:hidden;">	
+<iframe style="position:relative; top:-200px;" src="https://kr.noxinfluencer.com/youtube/realtime-subs-count/" scrolling="no"></iframe> 		
+</div>
 			
 	<footer class="footer-container white-text-container">
 		<div class="container">
