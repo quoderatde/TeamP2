@@ -58,7 +58,9 @@ li {
 
 <body>
 	<!-- Add your content of header -->
-	<% MemberDTO info = (MemberDTO)session.getAttribute("info");  %>
+	<%
+		MemberDTO info = (MemberDTO) session.getAttribute("info");
+	%>
 	<header>
 		<nav class="navbar navbar-default active">
 			<div class="container">
@@ -84,15 +86,23 @@ li {
 
 						<li>
 							<p>
-								<% System.out.println(info); %>
-								<%if(info==null){ %>
+								<%
+									System.out.println(info);
+								%>
+								<%
+									if (info == null) {
+								%>
 								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
-								<%}else{ %>
+								<%
+									} else {
+								%>
 								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
 									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
 									title="">로그아웃</a>
 
-								<%} %>
+								<%
+									}
+								%>
 							</p>
 						</li>
 
@@ -128,8 +138,7 @@ li {
 			<h3>YouTube 조회</h3>
 			<ul class="card-list">
 
-				<li class="card-item"><a class="card-link"
-					href="/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly"
+				<li class="card-item"><a class="card-link" href="influ.jsp"
 					style="text-decoration: none">
 						<div class="icon-wrapper">
 							<i class="kolicon kol-icon-rank"><img src="img/qq.PNG"></i>
@@ -138,7 +147,7 @@ li {
 						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div>
 				</a></li>
 				<li class="card-item"><a class="card-link"
-					href="/youtube-video-rank" style="text-decoration: none"><div
+					href="rank.html" style="text-decoration: none"><div
 							class="icon-wrapper">
 							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
 						</div>
@@ -151,16 +160,16 @@ li {
 						</div>
 						<div class="title">실시간 YouTube 구독자 수</div>
 						<div class="sub-title">최고의 실시간 구독자 통계 도구</div></a></li>
-				<li class="card-item"><a class="card-link" href="video.jsp"
-					style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/dd.PNG"></i>
+
+				<li class="card-item"><a class="card-link"
+					href="video.jsp"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-video"><img src="img/ff.PNG"></i>
 						</div>
-						<div class="title">YouTube 동영상 분석</div>
-						<div class="sub-title">
-							YouTube 동영상 분석 및 <br> 머신러닝을 통한 조회수 예측
-						</div></a></li>
+						<div class="title">YouTube 동영상 분석하기</div>
+						<div class="sub-title">머신러닝을 통한 조회수 예측</div></a></li>
 			</ul>
 		</div>
+
 	</section>
 
 	<!--  <div class="section-container">
@@ -242,10 +251,10 @@ li {
 
 
 	<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    navbarFixedTopAnimation();
-  });
-</script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			navbarFixedTopAnimation();
+		});
+	</script>
 
 	<footer class="footer-container white-text-container">
 		<div class="container">
@@ -287,11 +296,11 @@ li {
 	</footer>
 
 	<script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-    navActivePage();
-    scrollRevelation('.reveal');
-  });
-</script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			navActivePage();
+			scrollRevelation('.reveal');
+		});
+	</script>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID 
 
@@ -309,19 +318,24 @@ li {
 -->
 	<script type="text/javascript" src="./main.0cf8b554.js"></script>
 </body>
-<script>var egg = document.getElementById('close-egg');
-    egg.onclick = function (e) {
-        $('#home-egg').remove();
-        if (e.preventDefault) {
-            e.preventDefault();
-        } else {
-            window.event.returnValue == false;
-        };
-    }</script>
+<script>
+	var egg = document.getElementById('close-egg');
+	egg.onclick = function(e) {
+		$('#home-egg').remove();
+		if (e.preventDefault) {
+			e.preventDefault();
+		} else {
+			window.event.returnValue == false;
+		}
+		;
+	}
+</script>
 <script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
 <script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
 <script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
 <script type="text/javascript" src="/js/chunk.home.86f7275f.js"></script>
-<script type="text/javascript">sa.track('page_visit');</script>
+<script type="text/javascript">
+	sa.track('page_visit');
+</script>
 
 </html>
