@@ -31,7 +31,7 @@
 
 <title>실시간구독자수</title>
 
-<link href="./main.550dcf66.css" rel="stylesheet">
+<link href="main.550dcf66.css" rel="stylesheet">
 
 <style type="text/css">
 li{

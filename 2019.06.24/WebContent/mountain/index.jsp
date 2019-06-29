@@ -17,18 +17,13 @@
 <!-- Disable tap highlight on IE -->
 <meta name="msapplication-tap-highlight" content="no">
 
-
-<link rel="apple-touch-icon" sizes="180x180"
-	href="./assets/apple-icon-180x180.png">
-<link href="./assets/favicon.ico" rel="icon">
-
 <link href="" rel="stylesheet">
 <link href="css/common.2fef164c.css" rel="stylesheet">
 <link href="css/home.2f72f8e5.css" rel="stylesheet">
 
-<title>메인&소개</title>
+<title>메인</title>
 
-<link href="./main.550dcf66.css" rel="stylesheet">
+<link href="main.550dcf66.css" rel="stylesheet">
 <style type="text/css">
 input#search-input {
 	width: 500px;
@@ -147,22 +142,21 @@ li {
 						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div>
 				</a></li>
 				<li class="card-item"><a class="card-link"
-					href="rank.html" style="text-decoration: none"><div
-							class="icon-wrapper">
+					href="rank.html" style="text-decoration: none"><div	class="icon-wrapper">
 							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
 						</div>
 						<div class="title">YouTube 동영상 랭킹</div>
-						<div class="sub-title">유튜브 YouTube 동영상을 당신의 손 안에 쏟아 붓고 있습니다</div></a></li>
+						<div class="sub-title">YouTube 인기 동영상 한눈에 보기 </div></a></li>
 
-				<li class="card-item"><a class="card-link" href="view.jsp"
+				<li class="card-item"><a class="card-link" href="view2.jsp"
 					style="text-decoration: none"><div class="icon-wrapper">
 							<i class="kolicon kol-icon-followers"><img src="img/ss.PNG"></i>
 						</div>
 						<div class="title">실시간 YouTube 구독자 수</div>
-						<div class="sub-title">최고의 실시간 구독자 통계 도구</div></a></li>
+						<div class="sub-title">실시간 구독자 통계</div></a></li>
 
 				<li class="card-item"><a class="card-link"
-					href="video.jsp"><div class="icon-wrapper">
+					href="video.jsp" style="text-decoration: none"><div class="icon-wrapper">
 							<i class="kolicon kol-icon-video"><img src="img/ff.PNG"></i>
 						</div>
 						<div class="title">YouTube 동영상 분석하기</div>
@@ -171,84 +165,6 @@ li {
 		</div>
 
 	</section>
-
-	<!--  <div class="section-container">
-    <div class="container">
-      <div class="row">      
-          <div class="col-xs-12">
-
-
-            <div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel">
-                
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="item active">
-                        <img class="img-responsive" src="./assets/images/img-06.jpg" alt="First slide">
-                        <div class="carousel-caption card-shadow reveal">
-                          
-                          <h3>머신러닝이란? </h3>
-                          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            <span class="sr-only">Next</span>
-                          </a>
-                          <p>
-				                             인공 지능의 한 분야로, 컴퓨터가 학습할 수 있도록 하는 알고리즘과 기술을 개발하는 분야를 말한다. 
-				                            가령, 기계 학습을 통해서 수신한 이메일이 스팸인지 아닌지를 구분할 수 있도록 훈련할 수 있다. 
-				                            기계 학습의 핵심은 표현과 일반화에 있다.
-                          </p>
-                          
-                          <p>
-                            Quisque tempor, ligula pharetra luctus elementum, arcu nisl suscipit ante, pharetra commodo dui est et enim. Sed eu vestibulum elit. Donec ut libero non.
-                          </p>
-                          <a href="./application.jsp" class="btn btn-primary" title="">
-                            Discover
-                          </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img class="img-responsive" src="./assets/images/img-07.jpg" alt="First slide">
-                        <div class="carousel-caption card-shadow reveal">
-
-                          <h3>Lbortis</h3>
-                            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                              <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                              <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          <p>
-                            Pre id tellus in risus pre
-                            tium imperdiet eu lobortis dolor. Sed pellentesque, urna ac viverra lacinia, erat mauris venenatis purus, mollis egestas urna purus ac ex.
-                            Aenean nunc sem, lobortis at elit non, lobortis laoreet nibh. Maecenas at mi ipsum.
-                          </p>
-                          
-                          <p>
-                            Quisque tempor, ligula pharetra luctus elementum, arcu nisl suscipit ante, pharetra commodo dui est et enim. Sed eu vestibulum elit. Donec ut libero non.
-                          </p>
-                          <a href="#" class="btn btn-primary" title="">
-                            Discover
-                          </a>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-
-           
-          </div>
-          
-        </div>  
-      
-    </div>
-  </div>
- -->
-
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function(event) {
