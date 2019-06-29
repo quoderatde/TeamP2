@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@page import="com.member.MemberDTO"%>
 <%@page import="com.application.ApplicationDTO"%>
+<%@ page import="org.jsoup.Jsoup" %>
+<%@ page import="org.jsoup.nodes.Document" %>
+<%@ page import="org.jsoup.nodes.Element" %>
+<%@ page import="org.jsoup.select.Elements" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,34 +20,49 @@
 <!-- Disable tap highlight on IE -->
 <meta name="msapplication-tap-highlight" content="no">
 
+
+<link rel="apple-touch-icon" sizes="180x180"
+	href="./assets/apple-icon-180x180.png">
+<link href="./assets/favicon.ico" rel="icon">
+
 <link href="" rel="stylesheet">
 <link href="css/common.2fef164c.css" rel="stylesheet">
-<link href="css/home.2f72f8e5.css" rel="stylesheet">
+<link href="css/videoReport.d34fa792.css" rel="stylesheet">
 
-<title>메인</title>
+<title>실시간구독자수</title>
 
 <link href="main.550dcf66.css" rel="stylesheet">
+
 <style type="text/css">
-input#search-input {
-	width: 500px;
-	height: 35px;
+li{
+ list-style: none;
+}
+body{
+background-color: #F6F6F6;
 }
 
-h6 {
-	color: white;
+iframe {
+    
+    width: 1500px;
+    height: 900px;
+    border: 10px;
+    -ms-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    
 }
 
-button#search-btn {
-	height: 35px;
-}
 
-h2, h3 {
-	font-style:
-}
 
-li {
-	list-style: none;
-}
+
 </style>
 
 
@@ -53,9 +71,6 @@ li {
 
 <body>
 	<!-- Add your content of header -->
-	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
-	%>
 	<header>
 		<nav class="navbar navbar-default active">
 			<div class="container">
@@ -78,26 +93,11 @@ li {
 						<li><a href="./index.jsp" title="">Home</a></li>
 						<li><a href="./application.jsp" title="">분석신청</a></li>
 						<li><a href="./board.jsp" title="">게시판</a></li>
-
 						<li>
 							<p>
-								<%
-									System.out.println(info);
-								%>
-								<%
-									if (info == null) {
-								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
-								<%
-									} else {
-								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
-									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
-									title="">로그아웃</a>
+								<a href="./login.jsp" class="btn btn-default navbar-btn"
+									title="">로그인</a>
 
-								<%
-									}
-								%>
 							</p>
 						</li>
 
@@ -106,78 +106,19 @@ li {
 			</div>
 		</nav>
 	</header>
-
-	<!-- Add your site or app content here -->
-	<div
-		class="hero-full-container background-image-container white-text-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h1>치현이와 아이들</h1>
-					<p>WELCOME TO WORLD!!</p>
-					<br> <img src="aa.png"> <input type="text"
-						id="search-input" class="kol-input" placeholder="동영상 주소를 입력해주세요. ">
-					<button id="search-btn" class="kol-btn kol-btn-primary">바로가기</button>
-
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<section class="section-block card-block">
-		<div class="section-container">
-			<h2>치현이와 아이들 플랫폼 자세히 보기</h2>
-			<h3>YouTube 조회</h3>
-			<ul class="card-list">
-
-				<li class="card-item"><a class="card-link" href="influ.jsp"
-					style="text-decoration: none">
-						<div class="icon-wrapper">
-							<i class="kolicon kol-icon-rank"><img src="img/qq.PNG"></i>
-						</div>
-						<div class="title">인기 유튜버 순위</div>
-						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div>
-				</a></li>
-				<li class="card-item"><a class="card-link"
-					href="rank.html" style="text-decoration: none"><div	class="icon-wrapper">
-							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
-						</div>
-						<div class="title">YouTube 동영상 랭킹</div>
-						<div class="sub-title">YouTube 인기 동영상 한눈에 보기 </div></a></li>
-
-				<li class="card-item"><a class="card-link" href="view2.jsp"
-					style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-followers"><img src="img/ss.PNG"></i>
-						</div>
-						<div class="title">실시간 YouTube 구독자 수</div>
-						<div class="sub-title">실시간 구독자 통계</div></a></li>
-
-				<li class="card-item"><a class="card-link"
-					href="video.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/ff.PNG"></i>
-						</div>
-						<div class="title">YouTube 동영상 분석하기</div>
-						<div class="sub-title">머신러닝을 통한 조회수 예측</div></a></li>
-			</ul>
-		</div>
-
-	</section>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function(event) {
-			navbarFixedTopAnimation();
-		});
-	</script>
-
+	
+	
+<div class="page-container" align="center" style="overflow:hidden; height: 600px;">	
+<iframe style="position:relative; top:-200px;" src="https://kr.noxinfluencer.com/youtube/realtime-subs-count/" scrolling="no"></iframe> 		
+</div>
+			
 	<footer class="footer-container white-text-container">
 		<div class="container">
 			<div class="row">
 
+
 				<div class="col-xs-12">
-					<h3>치현이와 아이들</h3>
+					<h3>Mountain</h3>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">
@@ -234,24 +175,42 @@ li {
 -->
 	<script type="text/javascript" src="./main.0cf8b554.js"></script>
 </body>
-<script>
-	var egg = document.getElementById('close-egg');
-	egg.onclick = function(e) {
-		$('#home-egg').remove();
-		if (e.preventDefault) {
-			e.preventDefault();
-		} else {
-			window.event.returnValue == false;
-		}
-		;
-	}
-</script>
-<script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
-<script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
-<script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
-<script type="text/javascript" src="/js/chunk.home.86f7275f.js"></script>
-<script type="text/javascript">
-	sa.track('page_visit');
-</script>
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+	<script>window.fbAsyncInit = function() {
+        FB.init({
+            appId            : '314894179081566',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.1'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
+	<script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
+	<script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
+	<script type="text/javascript" src="/js/chunk.videoReport.a9909c69.js"></script>
+	<script type="text/javascript">sa.track('page_visit');</script>
 
 </html>

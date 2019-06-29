@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@page import="com.member.MemberDTO"%>
 <%@page import="com.application.ApplicationDTO"%>
+<%@ page import="org.jsoup.Jsoup" %>
+<%@ page import="org.jsoup.nodes.Document" %>
+<%@ page import="org.jsoup.nodes.Element" %>
+<%@ page import="org.jsoup.select.Elements" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,31 +23,26 @@
 
 <link href="" rel="stylesheet">
 <link href="css/common.2fef164c.css" rel="stylesheet">
-<link href="css/home.2f72f8e5.css" rel="stylesheet">
+<link href="css/videoReport.d34fa792.css" rel="stylesheet">
 
-<title>메인</title>
+<title>인기유투버</title>
 
 <link href="main.550dcf66.css" rel="stylesheet">
+
 <style type="text/css">
-input#search-input {
-	width: 500px;
-	height: 35px;
+li{
+ list-style: none;
 }
-
-h6 {
-	color: white;
+body{
+background-color: #F6F6F6;
 }
-
-button#search-btn {
-	height: 35px;
+.page-container{
+height: 500px;
+width: 800px;
 }
-
-h2, h3 {
-	font-style:
-}
-
-li {
-	list-style: none;
+td{
+font-style : Monospace;
+text-align: center; 
 }
 </style>
 
@@ -53,9 +52,6 @@ li {
 
 <body>
 	<!-- Add your content of header -->
-	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
-	%>
 	<header>
 		<nav class="navbar navbar-default active">
 			<div class="container">
@@ -78,26 +74,11 @@ li {
 						<li><a href="./index.jsp" title="">Home</a></li>
 						<li><a href="./application.jsp" title="">분석신청</a></li>
 						<li><a href="./board.jsp" title="">게시판</a></li>
-
 						<li>
 							<p>
-								<%
-									System.out.println(info);
-								%>
-								<%
-									if (info == null) {
-								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
-								<%
-									} else {
-								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
-									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
-									title="">로그아웃</a>
+								<a href="./login.jsp" class="btn btn-default navbar-btn"
+									title="">로그인</a>
 
-								<%
-									}
-								%>
 							</p>
 						</li>
 
@@ -106,78 +87,72 @@ li {
 			</div>
 		</nav>
 	</header>
+	
+	
+<div class="page-container" style="overflow:scroll;">
 
-	<!-- Add your site or app content here -->
-	<div
-		class="hero-full-container background-image-container white-text-container">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h1>치현이와 아이들</h1>
-					<p>WELCOME TO WORLD!!</p>
-					<br> <img src="aa.png"> <input type="text"
-						id="search-input" class="kol-input" placeholder="동영상 주소를 입력해주세요. ">
-					<button id="search-btn" class="kol-btn kol-btn-primary">바로가기</button>
+<% 	
+Document doc2 = Jsoup.connect("https://kr.noxinfluencer.com/youtube-channel-rank/top-100-all-all-youtuber-sorted-by-subs-weekly").get();	
+
+Elements head = doc2.getElementsByClass("kol-table.tr-of-th");
+Elements profile1 = doc2.body().getElementsByClass("avatar");
+Elements profile2 = doc2.body().getElementsByClass("name kol-name");
+Elements category = doc2.body().getElementsByClass("category-text");
+Elements followerNum = doc2.body().getElementsByClass("text followerNum with-num");
+Elements avgView = doc2.body().getElementsByClass("text avgView with-num");
+
+Elements head1 = profile1.select("th");
+Elements file1 = profile1.select("img");
+Elements file2 = profile2.select("span");
+Elements file3 = category.select("a");
+Elements file4 =followerNum.select("span.num");
+Elements file5 = avgView.select("span.num");
+
+%>
+<table align="center">
+
+	<tr>
+		<td><b>랭킹</b></td>
+        <td colspan="2"><b>기본정보</b></td>
+        <td><b>카테고리</b></td>
+        <td><b>구독자</b></td>
+        <td><b>평균조회수</b></td>
+
+ 	</tr>
 
 
-				</div>
-			</div>
-		</div>
+<% for(int i =0 ; i<50 ; i++){	%>
+	<tr>
+	   <td><%=i+1 %></td>
+	   <td><div style="width: 64px; height: 64px; overflow: hidden;"><%=file1.get(i+1)%></div></td>
+	   <td><%=file2.get(i) %></td>
+	   <td><%=file3.get(i).text() %></td>
+	   <td><%=file4.get(i) %></td>
+	   <td><%=file5.get(i) %></td>
+	</tr>
+
+<% }%>
+
+
+
+			
+	
+
+
+</table>
+	
+		
+			
 	</div>
-
-
-
-	<section class="section-block card-block">
-		<div class="section-container">
-			<h2>치현이와 아이들 플랫폼 자세히 보기</h2>
-			<h3>YouTube 조회</h3>
-			<ul class="card-list">
-
-				<li class="card-item"><a class="card-link" href="influ.jsp"
-					style="text-decoration: none">
-						<div class="icon-wrapper">
-							<i class="kolicon kol-icon-rank"><img src="img/qq.PNG"></i>
-						</div>
-						<div class="title">인기 유튜버 순위</div>
-						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div>
-				</a></li>
-				<li class="card-item"><a class="card-link"
-					href="rank.html" style="text-decoration: none"><div	class="icon-wrapper">
-							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
-						</div>
-						<div class="title">YouTube 동영상 랭킹</div>
-						<div class="sub-title">YouTube 인기 동영상 한눈에 보기 </div></a></li>
-
-				<li class="card-item"><a class="card-link" href="view2.jsp"
-					style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-followers"><img src="img/ss.PNG"></i>
-						</div>
-						<div class="title">실시간 YouTube 구독자 수</div>
-						<div class="sub-title">실시간 구독자 통계</div></a></li>
-
-				<li class="card-item"><a class="card-link"
-					href="video.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/ff.PNG"></i>
-						</div>
-						<div class="title">YouTube 동영상 분석하기</div>
-						<div class="sub-title">머신러닝을 통한 조회수 예측</div></a></li>
-			</ul>
-		</div>
-
-	</section>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function(event) {
-			navbarFixedTopAnimation();
-		});
-	</script>
-
+			
+			
 	<footer class="footer-container white-text-container">
 		<div class="container">
 			<div class="row">
 
+
 				<div class="col-xs-12">
-					<h3>치현이와 아이들</h3>
+					<h3>Mountain</h3>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">
@@ -234,24 +209,42 @@ li {
 -->
 	<script type="text/javascript" src="./main.0cf8b554.js"></script>
 </body>
-<script>
-	var egg = document.getElementById('close-egg');
-	egg.onclick = function(e) {
-		$('#home-egg').remove();
-		if (e.preventDefault) {
-			e.preventDefault();
-		} else {
-			window.event.returnValue == false;
-		}
-		;
-	}
-</script>
-<script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
-<script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
-<script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
-<script type="text/javascript" src="/js/chunk.home.86f7275f.js"></script>
-<script type="text/javascript">
-	sa.track('page_visit');
-</script>
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+	<script>window.fbAsyncInit = function() {
+        FB.init({
+            appId            : '314894179081566',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.1'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+	<script type="text/javascript" src="/js/runtime.6bab12ae4.js"></script>
+	<script type="text/javascript" src="/js/chunk.vendor.33ee32fb.js"></script>
+	<script type="text/javascript" src="/js/chunk.common.6664abf5.js"></script>
+	<script type="text/javascript" src="/js/chunk.videoReport.a9909c69.js"></script>
+	<script type="text/javascript">sa.track('page_visit');</script>
 
 </html>

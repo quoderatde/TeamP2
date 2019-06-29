@@ -9,17 +9,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import com.member.MemberDAO;
+
 public class ApplicationDAO {
 
 	private Connection conn = null;
 	private PreparedStatement pst = null;
 	private ResultSet rs = null;
 	
-	
+	private static ApplicationDAO dao = new ApplicationDAO();
+
+	public static ApplicationDAO getDAO() {
+		if (dao == null) {
+			dao = new ApplicationDAO();
+		}
+		return dao;
+	}
 	public void conn() {
 
 		try {
-			InputStream in = this.getClass().getResourceAsStream("db.properties");
+			InputStream in = this.getClass().getResourceAsStream("../member/db.properties");
 			Properties p = new Properties();
 			p.load(in);
 
@@ -63,6 +72,7 @@ public class ApplicationDAO {
 			String sql="INSERT INTO REQUEST_LIST_MEMBER VALUES(1,?)";
 			pst = conn.prepareStatement(sql);
 			
+		
 			pst.setString(1, dto.getEmail());
 			
 			int cnt = pst.executeUpdate();

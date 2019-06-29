@@ -22,21 +22,13 @@
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
-  
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+
 </head>
 
 <body>
-  <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
   <div id="login-page">
     <div class="container">
+     
       <form class="form-login" action="join.do" method="post">
         <h2 class="form-login-heading">Join Membership</h2>
         <div class="login-wrap">
@@ -55,7 +47,8 @@
            GENDER : <input type="radio" name="sex" value="남" checked>남
          		 <input type="radio" name="sex" value="여" checked>여<br>
           
-          <button class="btn btn-theme btn-block"   type="submit"><i class="fa fa-lock"></i> JOIN</button>
+          <button class="btn btn-theme btn-block"   type="submit" ><i class="fa fa-lock"></i> JOIN</button>
+       
              <button class="btn btn-theme btn-block"  type="submit"><i class="fa fa-lock"></i> CANCLE</button>
         
         
@@ -82,14 +75,15 @@
       </form>
     </div>
   </div>
+  
   <!-- js placed at the end of the document so the pages load faster -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <!--BACKSTRETCH-->
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
   <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  
+ 
+
   <script>
     $.backstretch("img/login-bg.jpg", {
       speed: 500

@@ -16,6 +16,8 @@ import com.member.LoginCon;
 import com.member.LogoutCon;
 import com.member.MemberDAO;
 import com.member.MemberDTO;
+import com.application.ApplicationDTO;
+import com.application.ApplicationDAO;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -31,7 +33,7 @@ public class FrontController extends HttpServlet {
 	map.put("mountain/application.do", new ApplicationCon());
 	
 	}
-
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("EUC-KR");
@@ -41,7 +43,10 @@ public class FrontController extends HttpServlet {
 		// 문자열 자르기
 		String command = requestURI.substring(contextPath.length() + 1);
 		System.out.println(command);
+		
 		ICommand input = map.get(command);
+		
+		System.out.println(input);
 		String url = input.execute(request, response);
 		response.sendRedirect(url);
 		
