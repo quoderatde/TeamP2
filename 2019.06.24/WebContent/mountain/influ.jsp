@@ -49,8 +49,8 @@ text-align: center;
 
 }
 img.avatar{
-	width: 100%;
-	height: 100%;
+	width: 64px;
+	height: 64px;
 }
 
 
@@ -134,7 +134,7 @@ Elements file5 = avgView.select("span.num");
 <% for(int i =0 ; i<50 ; i++){	%>
 	<tr>
 	   <td><%=i+1 %></td>
-	   <td><div class="rew" style="width: 64px; height: 64px; overflow: hidden;" ><%=file1.get(i+1)%></div></td>
+	   <td><%=file1.get(i+1)%></td>
 	   <td><%=file2.get(i) %></td>
 	   <td><%=file3.get(i).text() %></td>
 	   <td><%=file4.get(i) %></td>
