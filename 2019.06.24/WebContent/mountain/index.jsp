@@ -30,16 +30,8 @@ input#search-input {
 	height: 35px;
 }
 
-h6 {
-	color: white;
-}
-
 button#search-btn {
 	height: 35px;
-}
-
-h2, h3 {
-	font-style:
 }
 
 li {
@@ -63,7 +55,7 @@ li {
 					<button type="button" class="navbar-toggle collapsed"
 						data-toggle="collapse" data-target="#navbar-collapse"
 						aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span> <span
+						<span class="sr-only"></span> <span
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
@@ -75,9 +67,6 @@ li {
 
 				<div class="collapse navbar-collapse" id="navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="./index.jsp" title="">Home</a></li>
-						<li><a href="./application.jsp" title="">분석신청</a></li>
-						<li><a href="./board.jsp" title="">게시판</a></li>
 
 						<li>
 							<p>
@@ -142,25 +131,47 @@ li {
 						<div class="sub-title">다른 카테고리의 인기 YouTube 사용자</div>
 				</a></li>
 				<li class="card-item"><a class="card-link"
-					href="rank.html" style="text-decoration: none"><div	class="icon-wrapper">
+					href="rank.jsp" style="text-decoration: none"><div	class="icon-wrapper">
 							<i class="kolicon kol-icon-videos"><img src="img/ww.PNG"></i>
 						</div>
 						<div class="title">YouTube 동영상 랭킹</div>
 						<div class="sub-title">YouTube 인기 동영상 한눈에 보기 </div></a></li>
 
-				<li class="card-item"><a class="card-link" href="view2.jsp"
-					style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-followers"><img src="img/ss.PNG"></i>
+					
+				<li class="card-item"><a class="card-link"
+					href="view2.jsp" style="text-decoration: none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
 						</div>
 						<div class="title">실시간 YouTube 구독자 수</div>
 						<div class="sub-title">실시간 구독자 통계</div></a></li>
+						
 
+				
 				<li class="card-item"><a class="card-link"
 					href="video.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/ff.PNG"></i>
+							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
 						</div>
 						<div class="title">YouTube 동영상 분석하기</div>
 						<div class="sub-title">머신러닝을 통한 조회수 예측</div></a></li>
+					
+				
+				<li class="card-item"><a class="card-link"
+					href="application.jsp" style="text-decoration: none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
+						</div>
+						<div class="title">분석 신청서</div>
+						<div class="sub-title">머신러닝 분석을 통한 분석서비스 제공</div></a></li>
+						
+								
+				<li class="card-item"><a class="card-link"
+					href="board.jsp" style="text-decoration: none"><div class="icon-wrapper">
+							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
+						</div>
+						<div class="title">게시판</div>
+						<div class="sub-title">유튜버들의 커뮤니티 공간</div></a></li>
+						
+					
+					
 			</ul>
 		</div>
 
@@ -177,7 +188,7 @@ li {
 			<div class="row">
 
 				<div class="col-xs-12">
-					<h3>치현이와 아이들</h3>
+					<h3 align="left">치현이와 아이들</h3>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
+	<%@page import="com.member.MemberDTO"%>
+<%@page import="com.application.ApplicationDTO"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +37,7 @@ li{
 body{
 background-color: #F6F6F6;
 }
+
 </style>
 
 
@@ -43,6 +46,9 @@ background-color: #F6F6F6;
 
 <body>
 	<!-- Add your content of header -->
+	<%
+		MemberDTO info = (MemberDTO) session.getAttribute("info");
+	%>
 	<header>
 		<nav class="navbar navbar-default active">
 			<div class="container">
@@ -62,13 +68,26 @@ background-color: #F6F6F6;
 
 				<div class="collapse navbar-collapse" id="navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="./index.jsp" title="">Home</a></li>
-						<li><a href="./application.jsp" title="">분석신청</a></li>
-						<li><a href="./board.jsp" title="">게시판</a></li>
+		
 						<li>
 							<p>
-								<a href="./login.jsp" class="btn btn-default navbar-btn"
-									title="">로그인</a>
+							<%
+									System.out.println(info);
+								%>
+								<%
+									if (info == null) {
+								%>
+								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
+								<%
+									} else {
+								%>
+								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
+									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
+									title="">로그아웃</a>
+
+								<%
+									}
+								%>
 
 							</p>
 						</li>
@@ -251,7 +270,7 @@ background-color: #F6F6F6;
 			
 			
 			
-			
+
 
 <footer class="footer-container white-text-container">
   <div class="container">

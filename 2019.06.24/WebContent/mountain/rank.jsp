@@ -92,17 +92,9 @@ font-size: 18px;
 
 
 
-  <div class="section-container">
-    <div class="container text-center">
-      <div class="row section-container-spacer">
-        <div class="col-xs-12 col-md-12">
-          
-          
-        </div>  
-      </div>
-    
-    </div>
-  </div>
+<iframe src="http://localhost:8081/test/NewFile.html" width="1300" height="1200">
+
+</iframe>
 
 <footer class="footer-container white-text-container">
   <div class="container">
