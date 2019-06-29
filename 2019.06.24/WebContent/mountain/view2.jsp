@@ -108,7 +108,7 @@ iframe {
 	</header>
 	
 	
-<div class="page-container" align="center" style="overflow:hidden;">	
+<div class="page-container" align="center" style="overflow:hidden; height: 600px;">	
 <iframe style="position:relative; top:-200px;" src="https://kr.noxinfluencer.com/youtube/realtime-subs-count/" scrolling="no"></iframe> 		
 </div>
 			
