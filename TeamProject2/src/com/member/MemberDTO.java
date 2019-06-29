@@ -7,7 +7,10 @@ public class MemberDTO {
 	private String tel;
 	private String address;
 	private String youtube;
-
+	private String sex;
+	
+	
+	
 	public MemberDTO(String email, String pw, String name, String tel, String address, String youtube) {
 		this.email = email;
 		this.pw = pw;
@@ -86,6 +89,25 @@ public class MemberDTO {
 
 	public void setYoutube(String youtube) {
 		this.youtube = youtube;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+
+	public MemberDTO(String email, String pw, String name, String tel, String address, String youtube, String sex) 
+	{
+		this.email = email;
+		this.pw = pw;
+		this.name = name;
+		this.tel = tel;
+		this.address = address;
+		this.youtube = youtube;
+		this.sex = sex;
 	}
 
 }

@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>트게더</title>
+    <meta property="og:title" content="트게더">
+    <meta name="author" content="트게더" />
+    <meta name="description" content="트게더는 한국 트위치 TV 커뮤니티입니다. 트위치 TV 스트리머들과 시청자들이 만들어가는 다양한 컨텐츠를 확인해 보세요." />
+    <meta property="og:description" content="트게더는 한국 트위치 TV 커뮤니티입니다. 트위치 TV 스트리머들과 시청자들이 만들어가는 다양한 컨텐츠를 확인해 보세요.">
+    <meta property="og:image" content="https://d4fodtu7cqfym.cloudfront.net/images/logo_new.png">
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://tgd.kr/">
+    <meta property="og:url" content="https://tgd.kr/">
+    <meta property="og:type" content="website">
+    <meta name="naver-site-verification" content="8104a232949961aa532404ed63ad09672203379c"/>
+    <link rel="shortcut icon" href="https://d4fodtu7cqfym.cloudfront.net/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://d4fodtu7cqfym.cloudfront.net/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://d4fodtu7cqfym.cloudfront.net/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://d4fodtu7cqfym.cloudfront.net/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://d4fodtu7cqfym.cloudfront.net/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://d4fodtu7cqfym.cloudfront.net/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://d4fodtu7cqfym.cloudfront.net/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#6441a5">
+    <meta name="msapplication-TileImage" content="https://d4fodtu7cqfym.cloudfront.net/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#6441a5">
+    <link rel="stylesheet" type="text/css" href="https://d4fodtu7cqfym.cloudfront.net/ee3c296c155decedfd2e27c4f55e6652.min.css?v=190623">
+            <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71349615-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4">
+            <a href="/"><img src="https://d4fodtu7cqfym.cloudfront.net/images/logo_new.png" alt=""></a>
+          </div>
+          <div class="col-xs-8" align="right">
+            <form action="/search" method="get" id="right-search-form">
+              <input type="text" placeholder="트게더 검색" value="" id="right-search-input" name="q">
+              <button type="submit" id="right-search-btn"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="header-bar" class="container">
+        <div class="row">
+          <div id="header-menu-left" class="col-xs-2" align="left">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" id="latestDropdown" data-toggle="dropdown">
+                <i class="fa fa-clock-o"></i> 최근<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="latestDropdown" id="latestDropdownMenu"></ul>
+            </div>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" id="favoriteDropdown" data-toggle="dropdown">
+                <i class="fa fa-star"></i> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="favoriteDropdown" id="favoriteDropdownMenu"></ul>
+            </div>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" id="playgroundDropdown" data-toggle="dropdown">
+                <i class="fa fa-smile-o"></i> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="playgroundDropdown" id="playgroundDropdownMenu">
+                <li><a href="/play/attendance">출석체크</a></li>
+                <li><a href="/play/ad">전광판</a></li>
+                <li><a href="/play/iconshop">아이콘샵</a></li>
+                <li><a href="/play/giveaway">포인트경품</a></li>
+                <li class="divider"></li>
+                <li><a href="/play/chatutil">채팅툴</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div id="header-top-notice" class="col-xs-8" align="center">
+            &nbsp;
+          </div>
+
+          <div id="header-menu-right" class="col-xs-2" align="right">
+            <div class="dropdown">
+              <a href="/note/lists" class="dropdown-toggle">
+                                
+                <i class="fa fa-envelope-o"></i> <span class="caret"></span>
+              </a>
+            </div>
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle" id="userDropdown" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                 <span class="caret"></span></a>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                              <li><a href="/member/login"><i class="fa fa-twitch"></i> 로그인</a></li>
+                            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div id="content-area">
+      <!--div class="container"><div class="row"><div class="col-xs-12"><div class="alert alert-info"><i class="fa fa-wrench"></i> 현재 트게더 데이터베이스 개선 작업 중입니다. <a href="/13440939">[자세한 내용 보기]</a></div></div></div></div-->
+      
+      <div class="container" id="main">
+        <div class="row">
+                    <div class="col-xs-2" id="main-menu">
+            <div class="menu-wrapper">
+              <div class="header"><i class="fa fa-bars"></i> 트게더 전체 메뉴</div>
+              <a class="shortcut-link" data-shortcut="a" href="/all"><em>A</em>전체 글 보기</a>
+              <div class="spacer"></div>
+              <a class="shortcut-link" data-shortcut="b" href="/streamer"><em>B</em>스트리머 게시판</a>
+              <a class="shortcut-link" data-shortcut="c" href="/community"><em>C</em>커뮤니티</a>
+              <a class="shortcut-link" data-shortcut="h" href="/clips"><em>H</em>핫클립</a>
+              <a class="shortcut-link" href="https://battle.dog" target="_blank"><em><i class="fa fa-external-link"></i></em>게임대회</a>
+              <div class="spacer"></div>
+              <a class="shortcut-link" data-shortcut="p" href="/pr"><em>P</em>방송홍보</a>
+              <a class="shortcut-link" href="http://cast.help/commission/list" target="_blank"><em><i class="fa fa-external-link"></i></em>구인구직</a>
+              <a class="shortcut-link" data-shortcut="q" href="/qna"><em>Q</em>Q&amp;A</a>
+              <a class="shortcut-link" data-shortcut="t" href="/tip"><em>T</em>방송 TIP</a>
+              <div class="spacer"></div>
+              <a class="shortcut-link" data-shortcut="n" href="/notice"><em>N</em>공지사항</a>
+              <a class="shortcut-link" data-shortcut="e" href="/event"><em>E</em>이벤트</a>
+            </div>
+
+            <div class="menu-wrapper">
+              <div class="header"><i class="fa fa-bars"></i> 유용한 링크</div>
+              <a class="useful-links" href="https://twitch.tv" target="_blank"><i class="fa fa-square"></i> 트위치</a>
+              <a class="useful-links" href="https://twip.kr" target="_blank"><i class="fa fa-square"></i> Twip</a>
+              <a class="useful-links" href="https://www.twitch.tv/creatorcamp/ko-kr" target="_blank"><i class="fa fa-square"></i> 스트리머 캠프</a>
+              <a class="useful-links" style="letter-spacing:-1px;" href="https://goo.gl/forms/ALDa2tEqh31kYmCm1" target="_blank"><i class="fa fa-square"></i> 파트너 스포트라이트</a>
+            </div>
+
+                        <div class="menu-wrapper">
+              <div class="header"><a href="/schedule" class="schedule-link" data-type="header-pc"><i class="fa fa-calendar"></i> 트위치 스케줄</a></div>
+              <a href="/schedule" class="schedule-link" data-type="header-pc-date" target="_blank" style="font-size: 12px; padding: .6em 1.4em .6em .7em;"><i class="fa fa-square"></i> 2019년 06월 26일 (수)</a>
+                            
+              <a href="/schedule" class="schedule-link more" data-type="more">스케줄 더 보기 &raquo;</a>
+            </div>
+            
+                        <div id="left-banner-area">
+                        </div>
+            
+<!-- tgd_sidebar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5807968391783575"
+     data-ad-slot="2221690044"
+     data-ad-format="auto"></ins>
+          </div>
+          <div class="col-xs-10" id="main-content">
+                      <div class="row" id="upperBannerArea">
+    <div class="col-xs-12" align="center">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6">
+        <h3><a href="/commall">커뮤니티 인기글</a> <a href="/commall" class="more">&gt;</a></h3>
+        <ul class="latest-articles">
+            <li><a href="/gamenews" class="board-name">게임정보</a><a href="/26083528" data-board-alias="gamenews">스팀 여름 세일 시작! (6/25~7/7)</a> <strong class="comments"> [3]</strong></li><li><a href="/idol" class="board-name">아이돌</a><a href="/26086893" data-board-alias="idol">구구단 미미</a> <strong class="comments"> [1]</strong></li><li><a href="/furry" class="board-name">수인</a><a href="/26082034" data-board-alias="furry">머여여기</a> <strong class="comments"> [8]</strong></li><li><a href="/yerinb" class="board-name">백예린</a><a href="/26084441" data-board-alias="yerinb">6월 26일, 오늘은 예린 님의 생일입니다!!!!!</a> <strong class="comments"> [2]</strong></li><li><a href="/drawing" class="board-name">그림</a><a href="/26086778" data-board-alias="drawing">우리집 댕댕이</a> <strong class="comments"> [3]</strong></li><li><a href="/leggings" class="board-name">레깅스</a><a href="/26083434" data-board-alias="leggings">오늘도 시원시원 레깅스</a> <strong class="comments"></strong></li><li><a href="/humor_new" class="board-name">유머</a><a href="/26086924" data-board-alias="humor_new">한식대첩 요리사 사장 할머니</a> <strong class="comments"> [1]</strong></li><li><a href="/cat" class="board-name">야옹이</a><a href="/26087907" data-board-alias="cat">토끼냥이</a> <strong class="comments"></strong></li><li><a href="/kneesocks" class="board-name">니삭스</a><a href="/26077700" data-board-alias="kneesocks">갤주님 조공클립 니삭스</a> <strong class="comments"></strong></li><li><a href="/minecraft" class="board-name">마인크래프트</a><a href="/26078852" data-board-alias="minecraft">유명한 해외 유튜버 모임의 마크 방송들</a> <strong class="comments"> [1]</strong></li>        </ul>
+    </div>
+    <div class="col-xs-6">
+        <h3><a href="/focus">트게더 포커스</a> <a href="/focus" class="more">&gt;</a></h3>
+
+        <div id="focus-area">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeRO0m9rKRnhARC6tBW_zivIeYAbK_V6xPDYvSNak3AXp-AQ/viewform"><img src="//upload.tgd.kr/20190518/f958e3c696cdb64405b36810202161c0.png" alt="" border="0" class="img-rounded img-responsive"></a>
+                    </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12" id="esports-container">
+        <h3 class="pull-left"><a href="/esports">e스포츠 대회</a> <a href="/esports" class="more">&gt;</a></h3>
+        <a href="https://battle.dog/?utm_source=tgdkr&amp;utm_medium=frontpb" class="pull-right poweredby" target="_blank">
+            <span>Powered by</span>
+            <img src="https://a.b9.to/logo/tgd-bd-logo.png" alt="">
+        </a>
+        <div id="esports-list">
+                        <a href="https://support.battle.dog/hc/ko/articles/360009407334-%ED%8A%B8%EA%B2%8C%EB%8D%94-%ED%8F%AC%EC%BB%A4%EC%8A%A4-%EB%B0%B0%EB%84%88-%EA%B2%8C%EC%9E%AC-%EC%9A%94%EC%B2%AD?utm_source=tgdkr&amp;utm_medium=esports_banner" target="_blank" style="display:inline-block;margin-right:20px;"><img src="//upload.tgd.kr/20190604/b037f6c3eb28b6159132033d08de662b.png" style="width:400px;height:auto;"></a>
+                        <div style="display:inline-block;width:400px;margin-top:2px;">
+                            <a class="more" href="https://battle.dog/c/duhydsq9x?utm_source=tgdkr&amp;utm_medium=frontpage" target="_blank"><strong style="color:#6441a5;"><i class="fa fa-gamepad"></i> 블레이블루 크로스 태그 배틀</strong> 찐늅배 블태그 친선전</a>
+                            <a class="more" href="https://battle.dog/c/ctf7c44yu?utm_source=tgdkr&amp;utm_medium=frontpage" target="_blank"><strong style="color:#6441a5;"><i class="fa fa-gamepad"></i> 철권 7</strong> 제5회 따거 크래쉬 토너먼트</a>
+                            <a class="more" href="https://battle.dog/c/q2rdsxvj5?utm_source=tgdkr&amp;utm_medium=frontpage" target="_blank"><strong style="color:#6441a5;"><i class="fa fa-gamepad"></i> 기타</strong> 쏘다배 뉴비대전</a>
+                            <a class="more" href="https://battle.dog/c/20q9s61d4?utm_source=tgdkr&amp;utm_medium=frontpage" target="_blank"><strong style="color:#6441a5;"><i class="fa fa-gamepad"></i> 철권 7</strong> 제 3회 차리오의 팀! 랜덤 변태 철권대회</a>
+                        </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="latest-articles">
+            <div class="row"><div class="col-xs-6">
+            <li><a href="/event" class="board-name">이벤트</a><a href="/25296333" data-board-alias="event">[EVENT] 365아워스 매일 생방송 경품 대잔치</a> <strong class="comments"> [12]</strong></li><li><a href="/event" class="board-name">이벤트</a><a href="/25215469" data-board-alias="event">[EVENT] 제2회 마리텔 클립왕 이벤트</a> <strong class="comments"> [1]</strong></li>            </div><div class="col-xs-6">
+            <li><a href="/notice" class="board-name">공지사항</a><a href="/25912697" data-board-alias="notice">트게더 패치노트 (2019.6.23)</a> <strong class="comments"></strong></li><li><a href="/notice" class="board-name">공지사항</a><a href="/25649745" data-board-alias="notice">트게더 패치노트 (2019.6.19)</a> <strong class="comments"></strong></li>            </div></div>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+                <!-- tgd_index -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5807968391783575"
+            data-ad-slot="3350843536"
+            data-ad-format="auto"></ins>
+        </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h3 id="hot-clip-header"><a href="/clips">핫클립</a> <a href="/clips" class="more">&gt;</a></h3>
+
+        <div id="hot-clip-list">
+            <a href="#" class="nav left"><i class="fa fa-chevron-left"></i></a>
+                        <a href="/clips/352775" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483178430-preview-480x272.jpg" class="img-rounded">
+                <span>땅끝까지 여행중인 트수입니다. 6.25라서 대전현충원에서 진심…</span>
+            </a>
+                        <a href="/clips/352638" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483100271-preview-480x272.jpg" class="img-rounded">
+                <span>우리 아들은 꿈을 쫓아가면서 살아도 되지않을까요?</span>
+            </a>
+                        <a href="/clips/352727" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483152049-preview-480x272.jpg" class="img-rounded">
+                <span>이거 누가 땄냐? ㅋㅋㅋ</span>
+            </a>
+                        <a href="/clips/352689" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483132023-preview-480x272.jpg" class="img-rounded">
+                <span>※ 섹시함 주의 ※</span>
+            </a>
+                        <a href="/clips/352835" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483230517-preview-480x272.jpg" class="img-rounded">
+                <span>킨드샀는데 제드가 나오는거임 !!!</span>
+            </a>
+                        <a href="/clips/352624" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483091637-preview-480x272.jpg" class="img-rounded">
+                <span>공vs쌍 서울행vs부산행 철권 9:9 상황 그 결과는?</span>
+            </a>
+                        <a href="/clips/352562" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483058679-preview-480x272.jpg" class="img-rounded">
+                <span>자화자찬하고 좋아죽는 침착맨</span>
+            </a>
+                        <a href="/clips/352581" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483068665-preview-480x272.jpg" class="img-rounded">
+                <span>이 여자가....롤토체스하는법을 알까요?</span>
+            </a>
+                        <a href="/clips/352627" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483092917-preview-480x272.jpg" class="img-rounded">
+                <span>오늘 누구 하나 뒤지겠는데? 홍콩으로?</span>
+            </a>
+                        <a href="/clips/352657" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483112320-preview-480x272.jpg" class="img-rounded">
+                <span>남동생이 가출했는데 다음날 어머니가 말해줄때까지 몰랐다가 …</span>
+            </a>
+                        <a href="/clips/352650" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483107297-preview-480x272.jpg" class="img-rounded">
+                <span>소니캐스트한테 전염된 씹덕훈</span>
+            </a>
+                        <a href="/clips/352402" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/34652162816-offset-16736-preview-480x272.jpg" class="img-rounded">
+                <span>서로를 가르키는 두 엄지손가락</span>
+            </a>
+                        <a href="/clips/352546" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483038811-preview-480x272.jpg" class="img-rounded">
+                <span>발로 차이는 효니</span>
+            </a>
+                        <a href="/clips/352715" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483143649-preview-480x272.jpg" class="img-rounded">
+                <span>"이러니까 과몰입 되는 거야"..?</span>
+            </a>
+                        <a href="/clips/352596" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483078478-preview-480x272.jpg" class="img-rounded">
+                <span>새봄과 남자취향이 사뭇다른 소풍</span>
+            </a>
+                        <a href="/clips/352325" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C482576383-preview-480x272.jpg" class="img-rounded">
+                <span>나홀로 마피아</span>
+            </a>
+                        <a href="/clips/352641" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483101891-preview-480x272.jpg" class="img-rounded">
+                <span>위칭&따찌&개빈&까칠냥~수영장에서.</span>
+            </a>
+                        <a href="/clips/352515" class="hot-clip">
+                <img src="https://clips-media-assets2.twitch.tv/AT-cm%7C483012856-preview-480x272.jpg" class="img-rounded">
+                <span>초홍 : 진효오빠 질투없이 축복해드리겠다</span>
+            </a>
+                        <a href="#" class="nav right"><i class="fa fa-chevron-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="middleBannerArea">
+    <div class="col-xs-12" align="center">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h3><a href="/pr">방송홍보</a> <a href="/pr" class="more">&gt;</a></h3>
+        <ul class="latest-articles">
+            <li><a href="/26092720" data-board-alias="pr">방송 1일차인 신입 이한비입니…</a> <strong class="comments"></strong></li><li><a href="/26092712" data-board-alias="pr">신입) 종합게임 스트리머 vr겜…</a> <strong class="comments"></strong></li><li><a href="/26092694" data-board-alias="pr">의자 왔당 조립이랑 쇼핑 조금</a> <strong class="comments"></strong></li><li><a href="/26092403" data-board-alias="pr">레식 플딱 솔랭 (강등방어전)</a> <strong class="comments"></strong></li><li><a href="/26092218" data-board-alias="pr">쪼하! 성우지망생 조류의 아침?…</a> <strong class="comments"></strong></li><li><a href="/26092026" data-board-alias="pr">롤하는 방송입니다 ㅎㅎ</a> <strong class="comments"></strong></li><li><a href="/26091737" data-board-alias="pr">모든댓글 다 답해주는 소통 방…</a> <strong class="comments"></strong></li>        </ul>
+    </div>
+    <div class="col-xs-4">
+        <h3><a href="/qna">방송 Q&amp;A</a> <a href="/qna" class="more">&gt;</a></h3>
+        <ul class="latest-articles">
+            <li><a href="/26092687" data-board-alias="qna">저가 obs로 방송을 하는데 게임…</a> <strong class="comments"></strong></li><li><a href="/26092340" data-board-alias="qna">트위치에 팔로워 중에 영구적인…</a> <strong class="comments"></strong></li><li><a href="/26090478" data-board-alias="qna">2달차 스트리머입니다. 후원과 …</a> <strong class="comments"> [1]</strong></li><li><a href="/26089516" data-board-alias="qna">야외방송 할때 어플 질문</a> <strong class="comments"></strong></li><li><a href="/26086520" data-board-alias="qna">잼잼마을 마크 종류</a> <strong class="comments"> [1]</strong></li><li><a href="/26085850" data-board-alias="qna">NVENC 송출용 그래픽카드 GTX16…</a> <strong class="comments"> [1]</strong></li><li><a href="/26080701" data-board-alias="qna">방송 채팅 설정 질문!</a> <strong class="comments"></strong></li>        </ul>
+    </div>
+    <div class="col-xs-4">
+        <h3><a href="/tip">방송 TIP</a> <a href="/tip" class="more">&gt;</a></h3>
+        <ul class="latest-articles">
+            <li><a href="/25958137" data-board-alias="tip">144프레임 트위치 방송이 가능…</a> <strong class="comments"> [15]</strong></li><li><a href="/25912737" data-board-alias="tip">[NDI]컴퓨터 소리를 다른 컴퓨…</a> <strong class="comments"> [8]</strong></li><li><a href="/25859734" data-board-alias="tip">NVIDIA GeForce 431.18  Hotfix…</a> <strong class="comments"> [7]</strong></li><li><a href="/25841601" data-board-alias="tip">[방송 팁]생방송 화면에 크로마…</a> <strong class="comments"> [6]</strong></li><li><a href="/25771034" data-board-alias="tip">CLIP STUDIO PAINT 50% 할인중…</a> <strong class="comments"> [3]</strong></li><li><a href="/25708027" data-board-alias="tip">트게더 CSS 실시간으로 보면서 …</a> <strong class="comments"> [3]</strong></li><li><a href="/25560876" data-board-alias="tip">OBS로 완★전 쉽게 리버브, 오토…</a> <strong class="comments"> [26]</strong></li>        </ul>
+    </div>
+</div>          </div>
+        </div>
+
+        <div style="text-align: right; margin: 0 -15px 0; padding: 20px 0 0;">
+<!-- tgd_bottom_pc -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:250px"
+     data-ad-client="ca-pub-5807968391783575"
+     data-ad-slot="8693348598"></ins>
+        </div>
+
+        <!-- ad -->
+                <div id="weare-out-of-food" data-origin-width="300" style="width: 300px; margin-top: 10px; top: 106px; left: 0px; position: fixed; overflow: hidden; z-index: 10000;">
+                  <ins class="adsbygoogle"
+              style="display:inline-block;width:300px;height:600px"
+              data-ad-client="ca-pub-5807968391783575"
+              data-ad-slot="5039186842"></ins>
+                </div>
+        
+            <div id="plz-dont-block-me" data-origin-width="300" style="width: 300px; margin-top: 10px; top: 106px; right: 0px; position: fixed; overflow: hidden; z-index: 10000;">
+                <!-- tgd_right1 -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-5807968391783575"
+            data-ad-slot="1372238725"></ins>
+        
+                <!-- tgd_right2 -->
+        <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:250px"
+            data-ad-client="ca-pub-5807968391783575"
+            data-ad-slot="9764189475"></ins>
+              </div>
+              <!-- end ad -->
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <span>&copy; 2017-2018 트게더<br /><a href="/docs/policy.html" target="_blank">이용약관</a> | <a href="/docs/privacy.html" target="_blank">개인정보보호방침</a> | <a href="https://ejn.kr/team/" target="_blank">인재 채용 중</a> | <a href="/pages/adcontact">광고문의</a> | <a href="/support">고객지원</a><br />
+          트게더는 Twitch에서 운영하는 사이트가 아닙니다.<br /><br />
+          <a href="/?platform=mobile" id="switch-platform-link">모바일버전으로 전환하기</a></span>
+      </div>
+    </footer>
+
+    <a href="#" id="movetotop"><img src="https://d4fodtu7cqfym.cloudfront.net/images/move_to_top.png" alt=""></a>
+    <script type="text/javascript">var AD = [{"content":"\uc138\uc824\uc608 \ubc29\uc1a1\uc911","link":"https:\/\/www.twitch.tv\/ssoollac"},{"content":"300\ud68c \uae30\ub150\uc774\ub77c\uadf8\ub7f0\uc9c0 \uc2dc\uccad\uc790\uac00 3\uba85\uc774\uad70\uc694! \ud478\ud558\ud558","link":"https:\/\/www.twitch.tv\/despair_2"},{"content":"\ucc38\ub41c \ub864 \uc6d0\ub51c\ub7ec \uc785\ub2c8\ub2e4 \ucd08\uc2ec \uc783\uc9c0 \uc54a\uaca0\uc2b5\ub2c8\ub2e4!","link":"https:\/\/www.twitch.tv\/kinggyul"},{"content":"153cm\uc758 153\uc77c\ucc28 \ud2b9\ubcc4\ubc29\uc1a1!","link":"http:\/\/www.twitch.tv\/lelomon_"},{"content":"\ud314\ub85c\uc6cc 500\uba85\uc774 \ub418\uba74 \ub300\uba38\ub9ac\uac00 \ub418\ub294 \uc2a4\ud2b8\ub9ac\uba38\uac00 \uc788\ub2e4?! \ubfcc\uc29d\ube60\uc29d\ubfcc\uc29d?","link":"https:\/\/www.twitch.tv\/shabom_"},{"content":"\uc3e0\ub77c\uc528 \ub355\ud6c4\ub97c \uad6c\ud569\ub2c8\ub2e4!","link":"https:\/\/www.twitch.tv\/ssoollac"},{"content":"\u2605\ud2b8\uc704\uce58\ucd5c\uac15\ubbf8\ubaa8\u2605\ub108\uc758\uc544\uce68\uc740\u2605\ub0b4\uac00\uac00\uc838\uac04\ub2e4\u2605\uc720\uc785\ud658\uc601\u2605\ucc28\uc9ec\ub3c4\ud658\uc601\u2605","link":"https:\/\/www.twitch.tv\/dardarae"}];</script>
+    <script type="text/javascript" src="https://d4fodtu7cqfym.cloudfront.net/0a18972031b025305aa595c7f8b932f3.min.js?v=190623"></script>
+    <script type="text/javascript" src="https://d4fodtu7cqfym.cloudfront.net/5f1b439bdf9bf52de0892c7e5bf81ffe.min.js?v=190623"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </body>
+</html>

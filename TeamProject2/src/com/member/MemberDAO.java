@@ -198,4 +198,35 @@ public class MemberDAO {
 		
 		return Info;
 	}
+	
+	public ArrayList<MemberDTO> User_SelectAll()
+	{
+		conn();
+		String sql = "SELECT * FROM MEMBER";
+		ArrayList<MemberDTO>Info = new ArrayList<MemberDTO>(); 
+		try {
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				MemberDTO list=new MemberDTO();
+				list.setEmail(rs.getString(1));
+				list.setPw(rs.getString(2));
+				list.setName(rs.getString(3));
+				list.setTel(rs.getString(4));
+				list.setAddress(rs.getString(5));
+				list.setYoutube(rs.getString(6));
+				list.setSex(rs.getString(7));
+				Info.add(list);
+				
+			}
+			return Info;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		
+		return Info;
+	}
 }

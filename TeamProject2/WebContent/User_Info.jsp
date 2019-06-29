@@ -1,3 +1,6 @@
+<%@page import="com.member.MemberDTO"%>
+<%@page import="com.member.MemberDAO"%>
+<%@page import="java.util.ArrayList" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -26,12 +29,16 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet">
 
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+
+  
+   <% 
+ 
+ 	MemberDAO dao = new MemberDAO();
+	ArrayList<MemberDTO> List = dao.User_SelectAll();
+	
+	
+		  
+%>
 </head>
 
 <body>
@@ -117,14 +124,18 @@
                   </tr>
                 </thead>
                 <tbody>
+                <% for(int i=0; i<List.size(); i++) {%>
                   <tr class="gradeX">
-                    <td></td>
-                    <td>Internet Explorer 4.0</td>
-                    <td>Win 95+</td>
-                    <td>4</td>
-                    <td>X</td>
+                    <td><%=List.get(i).getYoutube() %></td>
+                    <td><%=List.get(i).getEmail() %></td>
+                    <td><%=List.get(i).getPw() %></td>
+                    <td><%=List.get(i).getName() %></td>
+                    <td><%=List.get(i).getSex() %>
+                    <td><%=List.get(i).getTel() %></td>
+                    <td><%=List.get(i).getAddress() %></td>
+                    
                   </tr>
- 
+ 				<%} %>
                 </tbody>
               </table>
             </div>
@@ -137,27 +148,8 @@
     </section>
     <!-- /MAIN CONTENT -->
     <!--main content end-->
-    <!--footer start-->
-    <footer class="site-footer">
-      <div class="text-center">
-        <p>
-          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
-        </p>
-        <div class="credits">
-          <!--
-            You are NOT allowed to delete the credit link to TemplateMag with free version.
-            You can delete the credit link only if you bought the pro version.
-            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-            Licensing information: https://templatemag.com/license/
-          -->
-          Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
-        </div>
-        <a href="advanced_table.html#" class="go-top">
-          <i class="fa fa-angle-up"></i>
-          </a>
-      </div>
-    </footer>
-    <!--footer end-->
+
+
   </section>
   <!-- js placed at the end of the document so the pages load faster -->
   <script src="lib/jquery/jquery.min.js"></script>
