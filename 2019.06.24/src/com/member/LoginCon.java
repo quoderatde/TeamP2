@@ -30,7 +30,7 @@ public class LoginCon extends HttpServlet implements ICommand {
 
 		if (loginInfo != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("info", loginInfo);
+			session.setAttribute("email", loginInfo.getEmail());
 		}
 		url = "index.jsp";
 		return url;

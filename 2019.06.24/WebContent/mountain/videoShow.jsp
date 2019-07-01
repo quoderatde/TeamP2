@@ -50,7 +50,7 @@ background-color: #F6F6F6;
 <body>
 	<!-- Add your content of header -->
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
+	 String email = (String) session.getAttribute("email");
 	%>
 	
 	<header>
@@ -66,7 +66,7 @@ background-color: #F6F6F6;
 					</button>
 					<a class="navbar-brand" href="./index.jsp" title=""> <img
 						src="./assets/images/mashup-icon.svg" class="navbar-logo-img"
-						alt=""> 치현이와 아이들
+						alt=""> Y-Mining
 					</a>
 				</div>
 
@@ -76,16 +76,16 @@ background-color: #F6F6F6;
 						<li>
 							<p>
 								<%
-									System.out.println(info);
+									System.out.println(email);
 								%>
 								<%
-									if (info == null) {
+									if (email == null) {
 								%>
 								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
 								<%
 									} else {
 								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
+								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=email%>님
 									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
 									title="">로그아웃</a>
 

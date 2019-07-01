@@ -38,7 +38,7 @@ font-size: 18px;
 
 <body> <!-- Add your content of header -->
 <%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
+String email = (String) session.getAttribute("email");
 	%>
 
 <header>
@@ -63,16 +63,16 @@ font-size: 18px;
           <li>
             <p>
             <%
-									System.out.println(info);
+									System.out.println(email);
 								%>
 								<%
-									if (info == null) {
+									if (email == null) {
 								%>
 								<a href="login.jsp" class="btn btn-default navbar-btn" title="">·Î±×ÀÎ</a>
 								<%
 									} else {
 								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>´Ô
+								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=email%>´Ô
 									È¯¿µÇÕ´Ï´Ù!</a> <a href="logout.do" class="btn btn-default navbar-btn"
 									title="">·Î±×¾Æ¿ô</a>
 

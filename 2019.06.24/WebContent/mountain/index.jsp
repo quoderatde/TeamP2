@@ -37,6 +37,13 @@ button#search-btn {
 li {
 	list-style: none;
 }
+h1#title{
+size: 20px;
+}
+h3.small{
+font-size: 30px;
+
+}
 </style>
 
 
@@ -46,7 +53,7 @@ li {
 <body>
 	<!-- Add your content of header -->
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
+		 String email = (String) session.getAttribute("email");
 	%>
 	<header>
 		<nav class="navbar navbar-default active">
@@ -61,7 +68,7 @@ li {
 					</button>
 					<a class="navbar-brand" href="./index.jsp" title=""> <img
 						src="./assets/images/mashup-icon.svg" class="navbar-logo-img"
-						alt=""> 치현이와 아이들
+						alt=""> Y-Mining
 					</a>
 				</div>
 
@@ -71,16 +78,16 @@ li {
 						<li>
 							<p>
 								<%
-									System.out.println(info);
+									System.out.println(email);
 								%>
 								<%
-									if (info == null) {
+									if (email == null) {
 								%>
 								<a href="login.jsp" class="btn btn-default navbar-btn" title="">로그인</a>
 								<%
 									} else {
 								%>
-								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=info.getName()%>님
+								<a href="login.jsp" class="btn btn-default navbar-btn" title=""><%=email%>님
 									환영합니다!</a> <a href="logout.do" class="btn btn-default navbar-btn"
 									title="">로그아웃</a>
 
@@ -102,7 +109,7 @@ li {
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<h1>치현이와 아이들</h1>
+					<h1 id="title">Y-Mining</h1>
 					<p>WELCOME TO WORLD!!</p>
 					<br> 
 					<form action="http://127.0.0.1:33/main" method="get">
@@ -122,7 +129,7 @@ li {
 
 	<section class="section-block card-block">
 		<div class="section-container">
-			<h2>치현이와 아이들 플랫폼 자세히 보기</h2>
+			<h2>Y-Mining 플랫폼 자세히 보기</h2>
 			<h3>YouTube 조회</h3>
 			<ul class="card-list">
 
@@ -144,7 +151,7 @@ li {
 					
 				<li class="card-item"><a class="card-link"
 					href="view2.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
+							<i class="kolicon kol-icon-video"><img src="img/33.PNG"></i>
 						</div>
 						<div class="title">실시간 YouTube 구독자 수</div>
 						<div class="sub-title">실시간 구독자 통계</div></a></li>
@@ -153,7 +160,7 @@ li {
 				
 				<li class="card-item"><a class="card-link"
 					href="video.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
+							<i class="kolicon kol-icon-video"><img src="img/44.PNG"></i>
 						</div>
 						<div class="title">YouTube 동영상 분석하기</div>
 						<div class="sub-title">머신러닝을 통한 조회수 예측</div></a></li>
@@ -161,7 +168,7 @@ li {
 				
 				<li class="card-item"><a class="card-link"
 					href="application.jsp" style="text-decoration: none"><div class="icon-wrapper">
-							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
+							<i class="kolicon kol-icon-video"><img src="img/11.png"></i>
 						</div>
 						<div class="title">분석 신청서</div>
 						<div class="sub-title">머신러닝 분석을 통한 분석서비스 제공</div></a></li>
@@ -192,17 +199,12 @@ li {
 			<div class="row">
 
 				<div class="col-xs-12">
-					<h3 align="left">치현이와 아이들</h3>
+				<br>
+					<h3 class="small">치현이와 아이들 "Y-Mining"</h3>
 
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">
-							<p>
-								<small>머신러닝을 통한 조회수 예측 프로그램 <a
-									href="http://www.mashup-template.com/"
-									title="Create website with free html template">
-										</a><a href="https://www.unsplash.com/"
-									title="Beautiful Free Images"></a></small>
-							</p>
+
 						</div>
 						<div class="col-xs-12 col-sm-5">
 							<p class="text-right">
