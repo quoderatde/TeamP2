@@ -36,8 +36,23 @@
     <meta name="theme-color" content="#6441a5">
     <link rel="stylesheet" type="text/css" href="https://d4fodtu7cqfym.cloudfront.net/fad0d3bf8c478ce27ec4b20657d43000.min.css?v=190623">
  
+ 	<style type="text/css">
+ 	body{
+ 		background-color: white;
+ 	}
+ 	
+ 	</style>
   </head>
   <% 
+  String name = "";
+  if(session.getAttribute("email")==null)
+  {
+  	name = "";
+  }
+  else
+  {
+  	name = (String)session.getAttribute("email");
+  }
   		int code = Integer.parseInt(request.getParameter("code"));
   		comu_DAO dao = new comu_DAO();
   		dao.View_count(code);
@@ -79,9 +94,16 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <p class="navbar-btn">
+                        <% if(name.equals("")){ %>
                             <a class="btn btn-primary" href="/user/login?url=Imh0dHA6Ly90dnBsZS5jb20vIg.D_Rm3w.qb-pLTEU71QDKcdhdNTU_Xp8Ync">
                                 <i class="fa fa-sign-in"></i> 로그인
                             </a>
+                            <%}else{%>
+                            <%=name %>님 환영합니다.
+                            <a class="btn btn-primary" href="/user/login?url=Imh0dHA6Ly90dnBsZS5jb20vIg.D_Rm3w.qb-pLTEU71QDKcdhdNTU_Xp8Ync">
+                                <i class="fa fa-sign-in"></i> 로그아웃
+                            </a>
+                            <%} %>
                         </p>
                     </li>
                 </ul>

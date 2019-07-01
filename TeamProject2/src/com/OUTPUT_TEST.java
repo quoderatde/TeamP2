@@ -21,8 +21,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 	
 	HttpSession session =  request.getSession();
 	// String name = session.getAttribute("email");
-	session.setAttribute("name", "¿Ã±§ø‰");
-	String name = (String)session.getAttribute("name");
+	String name = (String)session.getAttribute("email");
 	comu_DTO dto = new comu_DTO(title_tag, title, content, name);
 	
 	comu_DAO dao = new comu_DAO();

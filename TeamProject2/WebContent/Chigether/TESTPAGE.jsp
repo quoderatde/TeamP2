@@ -40,6 +40,17 @@
 
 </script>
 <%
+String name = "";
+if(session.getAttribute("email")==null)
+{
+	name = "";
+}
+else
+{
+	name = (String)session.getAttribute("email");
+}
+
+
 	String type = request.getParameter("type");
 	comu_DAO dao = new comu_DAO();
 	ArrayList<comu_DTO> list = new ArrayList<comu_DTO>();
@@ -75,7 +86,12 @@
 	
 
 %>
+<style type="text/css">
+body{
+	background-color: white;
+}
 
+</style>
   </head>
   <body>
   
@@ -112,9 +128,16 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <p class="navbar-btn">
+                        <% if(name.equals("")){ %>
                             <a class="btn btn-primary" href="/user/login?url=Imh0dHA6Ly90dnBsZS5jb20vIg.D_Rm3w.qb-pLTEU71QDKcdhdNTU_Xp8Ync">
                                 <i class="fa fa-sign-in"></i> 로그인
                             </a>
+                            <%}else{%>
+                            <%=name %>님 환영합니다.
+                            <a class="btn btn-primary" href="/user/login?url=Imh0dHA6Ly90dnBsZS5jb20vIg.D_Rm3w.qb-pLTEU71QDKcdhdNTU_Xp8Ync">
+                                <i class="fa fa-sign-in"></i> 로그아웃
+                            </a>
+                            <%} %>
                         </p>
                     </li>
                 </ul>
