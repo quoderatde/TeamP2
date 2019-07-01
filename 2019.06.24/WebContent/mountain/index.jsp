@@ -104,17 +104,21 @@ li {
 				<div class="col-xs-12">
 					<h1>치현이와 아이들</h1>
 					<p>WELCOME TO WORLD!!</p>
-					<br> <img src="aa.png"> <input type="text"
+					<br> 
+					<form action="http://127.0.0.1:33/main" method="get">
+					<img src="aa.png"><input name="url" type="text"
 						id="search-input" class="kol-input" placeholder="동영상 주소를 입력해주세요. ">
-					<button id="search-btn" class="kol-btn kol-btn-primary">바로가기</button>
-
-
+					<button type="submit"   id="search-btn" class="kol-btn kol-btn-primary">바로가기</button>
+</form>
 				</div>
 			</div>
 		</div>
 	</div>
 
+<script type="text/javascript">
 
+
+</script>
 
 	<section class="section-block card-block">
 		<div class="section-container">
@@ -164,7 +168,7 @@ li {
 						
 								
 				<li class="card-item"><a class="card-link"
-					href="board.jsp" style="text-decoration: none"><div class="icon-wrapper">
+					href="http://192.168.0.53:8086/TeamProject2/Chigether/Main.jsp" style="text-decoration: none"><div class="icon-wrapper">
 							<i class="kolicon kol-icon-video"><img src="img/zz.PNG"></i>
 						</div>
 						<div class="title">게시판</div>
@@ -193,11 +197,11 @@ li {
 					<div class="row">
 						<div class="col-xs-12 col-sm-7">
 							<p>
-								<small>Website created with <a
+								<small>머신러닝을 통한 조회수 예측 프로그램 <a
 									href="http://www.mashup-template.com/"
-									title="Create website with free html template">Mashup
-										Template</a>/<a href="https://www.unsplash.com/"
-									title="Beautiful Free Images">Unsplash</a></small>
+									title="Create website with free html template">
+										</a><a href="https://www.unsplash.com/"
+									title="Beautiful Free Images"></a></small>
 							</p>
 						</div>
 						<div class="col-xs-12 col-sm-5">

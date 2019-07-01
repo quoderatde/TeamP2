@@ -163,7 +163,10 @@ body {
 										좋아요</span>)
 								</span>
 							</div></li>
-						
+						<li class="detail-item"><span class="title"> 예상 조회수</span>
+							<div class="content" style="color:crimson;font-size: 25px;font-weight: bold;"><% if(request.getParameter("y_pred")!=null) {%>
+								<%= request.getParameter("y_pred")  %>
+								<%} %></div></li>
 					</ul>
 				</div>
 				<div class="detail-block">
@@ -281,73 +284,16 @@ body {
 									class="kol-tag ellipsis" id="popup-data-tag"></span>
 								<div>
 									<div class="content-block">
-										<div class="title">YouTube 에서 이 태그의 조회수 추이 (최근 30일)</div>
-										<div class="content-detail">
-											<div class="chart-wrapper" id="popup-dom-chart"></div>
 										</div>
 									</div>
 
 								</div>
 							</div>
-						</div>
+					
 					</div></td>
-				<td>
-
-					<div>예상 조회수</div>
-
-				</td>
 			</tr>
 		</table>
 
-
-
-
-
-
-
-
-
-
-
-		<footer class="footer-container white-text-container">
-			<div class="container">
-				<div class="row">
-
-
-					<div class="col-xs-12">
-						<h3>Mountain</h3>
-
-						<div class="row">
-							<div class="col-xs-12 col-sm-7">
-								<p>
-									<small>Website created with <a
-										href="http://www.mashup-template.com/"
-										title="Create website with free html template">Mashup
-											Template</a>/<a href="https://www.unsplash.com/"
-										title="Beautiful Free Images">Unsplash</a></small>
-								</p>
-							</div>
-							<div class="col-xs-12 col-sm-5">
-								<p class="text-right">
-									<a href="https://facebook.com/"
-										class="social-round-icon white-round-icon fa-icon" title="">
-										<i class="fa fa-facebook" aria-hidden="true"></i>
-									</a> <a href="https://twitter.com/"
-										class="social-round-icon white-round-icon fa-icon" title="">
-										<i class="fa fa-twitter" aria-hidden="true"></i>
-									</a> <a href="https://www.linkedin.com/"
-										class="social-round-icon white-round-icon fa-icon" title="">
-										<i class="fa fa-linkedin" aria-hidden="true"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</div>
-		</footer>
 
 		<script>
 			document.addEventListener("DOMContentLoaded", function(event) {
